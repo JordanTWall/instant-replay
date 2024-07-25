@@ -6,6 +6,7 @@ import DescriptionScreen from './screens/DescriptionScreen';
 import TeamListScreen from './screens/TeamListScreen';
 import YearSelectionScreen from './screens/YearSelectionScreen';
 import GameListScreen from './screens/GameListScreen';
+import BackButton from './components/BackButton';
 
 const App: React.FC = () => {
   const [currentScreen, setCurrentScreen] = useState<'description' | 'teamList' | 'yearSelection' | 'gameList'>('description');
@@ -20,15 +21,6 @@ const App: React.FC = () => {
     setCurrentScreen('yearSelection');
   };
 
-  const handleBackClick = () => {
-    if (currentScreen === 'yearSelection') {
-      setCurrentScreen('teamList');
-      setSelectedTeam(null);
-    } else {
-      setCurrentScreen('yearSelection');
-    }
-  };
-
   const handleYearClick = (year: number) => {
     setCurrentScreen('gameList');
   };
@@ -36,6 +28,23 @@ const App: React.FC = () => {
   const resetAppState = () => {
     setCurrentScreen('description');
     setSelectedTeam(null);
+  };
+
+  const handleBackClick = () => {
+    switch (currentScreen) {
+      case 'gameList':
+        setCurrentScreen('yearSelection');
+        break;
+      case 'yearSelection':
+        setCurrentScreen('teamList');
+        setSelectedTeam(null);
+        break;
+      case 'teamList':
+        setCurrentScreen('description');
+        break;
+      default:
+        break;
+    }
   };
 
   return (
@@ -50,6 +59,7 @@ const App: React.FC = () => {
         {currentScreen === 'gameList' && selectedTeam && (
           <GameListScreen onBackClick={handleBackClick} selectedTeam={selectedTeam.name} />
         )}
+        {currentScreen !== 'description' && <BackButton onClick={handleBackClick} />}
       </div>
     </Router>
   );

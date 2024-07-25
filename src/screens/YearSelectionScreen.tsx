@@ -17,7 +17,7 @@ const YearSelectionScreen: React.FC<YearSelectionScreenProps> = ({ selectedTeam,
         {Array.from({ length: 13 }, (_, i) => 2010 + i).map((year) => (
           <button
             key={year}
-            className="bg-white shadow-md rounded-lg p-2 cursor-pointer hover:bg-gray-200 transition-colors"
+            className="first:mt-4 first:ml-4 selection:bg-white shadow-md rounded-lg p-2 cursor-pointer hover:bg-gray-200 transition-colors"
             onClick={() => onYearClick(year)}
           >
             {year}
