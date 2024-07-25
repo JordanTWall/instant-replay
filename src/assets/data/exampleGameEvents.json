@@ -1,0 +1,144 @@
+{
+  "get": "games/events",
+  "parameters": { "id": "3986" },
+  "errors": [],
+  "results": 8,
+  "response": [
+    {
+      "quarter": "First",
+      "minute": "2:54",
+      "team": {
+        "id": 9,
+        "name": "Cleveland Browns",
+        "logo": "https://media.api-sports.io/american-football/teams/9.png"
+      },
+      "player": {
+        "id": 618,
+        "name": "Amari Cooper",
+        "image": "https://media.api-sports.io/american-football/players/618.png"
+      },
+      "type": "TD",
+      "comment": "Amari Cooper 11 Yd pass from Jacoby Brissett (Cade York Kick)",
+      "score": { "home": 7, "away": 0 }
+    },
+    {
+      "quarter": "Second",
+      "minute": "14:55",
+      "team": {
+        "id": 22,
+        "name": "Pittsburgh Steelers",
+        "logo": "https://media.api-sports.io/american-football/teams/22.png"
+      },
+      "player": {
+        "id": 1565,
+        "name": "Najee Harris",
+        "image": "https://media.api-sports.io/american-football/players/1565.png"
+      },
+      "type": "TD",
+      "comment": "Najee Harris 5 Yd Run (Chris Boswell Kick)",
+      "score": { "home": 7, "away": 7 }
+    },
+    {
+      "quarter": "Second",
+      "minute": "8:58",
+      "team": {
+        "id": 9,
+        "name": "Cleveland Browns",
+        "logo": "https://media.api-sports.io/american-football/teams/9.png"
+      },
+      "player": {
+        "id": 630,
+        "name": "David Njoku",
+        "image": "https://media.api-sports.io/american-football/players/630.png"
+      },
+      "type": "TD",
+      "comment": "David Njoku 7 Yd pass from Jacoby Brissett",
+      "score": { "home": 13, "away": 7 }
+    },
+    {
+      "quarter": "Second",
+      "minute": "3:50",
+      "team": {
+        "id": 22,
+        "name": "Pittsburgh Steelers",
+        "logo": "https://media.api-sports.io/american-football/teams/22.png"
+      },
+      "player": {
+        "id": 1564,
+        "name": "Mitch Trubisky",
+        "image": "https://media.api-sports.io/american-football/players/1564.png"
+      },
+      "type": "TD",
+      "comment": "Mitch Trubisky 1 Yd Run (Chris Boswell Kick)",
+      "score": { "home": 13, "away": 14 }
+    },
+    {
+      "quarter": "Third",
+      "minute": "2:31",
+      "team": {
+        "id": 9,
+        "name": "Cleveland Browns",
+        "logo": "https://media.api-sports.io/american-football/teams/9.png"
+      },
+      "player": {
+        "id": 666,
+        "name": "Anthony Walker Jr.",
+        "image": "https://media.api-sports.io/american-football/players/666.png"
+      },
+      "type": "FG",
+      "comment": "Cade York 34 Yd Field Goal",
+      "score": { "home": 16, "away": 14 }
+    },
+    {
+      "quarter": "Fourth",
+      "minute": "9:29",
+      "team": {
+        "id": 9,
+        "name": "Cleveland Browns",
+        "logo": "https://media.api-sports.io/american-football/teams/9.png"
+      },
+      "player": {
+        "id": 610,
+        "name": "Nick Chubb",
+        "image": "https://media.api-sports.io/american-football/players/610.png"
+      },
+      "type": "TD",
+      "comment": "Nick Chubb 1 Yd Run (Cade York Kick)",
+      "score": { "home": 23, "away": 14 }
+    },
+    {
+      "quarter": "Fourth",
+      "minute": "1:48",
+      "team": {
+        "id": 22,
+        "name": "Pittsburgh Steelers",
+        "logo": "https://media.api-sports.io/american-football/teams/22.png"
+      },
+      "player": {
+        "id": 1630,
+        "name": "Chris Boswell",
+        "image": "https://media.api-sports.io/american-football/players/1630.png"
+      },
+      "type": "FG",
+      "comment": "Chris Boswell 34 Yd Field Goal",
+      "score": { "home": 23, "away": 17 }
+    },
+    {
+      "quarter": "Fourth",
+      "minute": "0:00",
+      "team": {
+        "id": 9,
+        "name": "Cleveland Browns",
+        "logo": "https://media.api-sports.io/american-football/teams/9.png"
+      },
+      "player": {
+        "id": 672,
+        "name": "Denzel Ward",
+        "image": "https://media.api-sports.io/american-football/players/672.png"
+      },
+      "type": "TD",
+      "comment": "Denzel Ward fumble recovery in end zone",
+      "score": { "home": 29, "away": 17 }
+    }
+  ]
+}

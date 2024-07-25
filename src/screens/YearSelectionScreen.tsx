@@ -5,9 +5,10 @@ import TeamCard from '../components/TeamCard';
 interface YearSelectionScreenProps {
   selectedTeam: any;
   onBackClick: () => void;
+  onYearClick: (year: number) => void;
 }
 
-const YearSelectionScreen: React.FC<YearSelectionScreenProps> = ({ selectedTeam, onBackClick }) => {
+const YearSelectionScreen: React.FC<YearSelectionScreenProps> = ({ selectedTeam, onBackClick, onYearClick }) => {
   return (
     <div className="flex flex-col items-center w-full max-w-xl mx-auto">
       <TeamCard name={selectedTeam.name} logo={selectedTeam.logo} onClick={() => {}} />
@@ -15,7 +16,8 @@ const YearSelectionScreen: React.FC<YearSelectionScreenProps> = ({ selectedTeam,
         {Array.from({ length: 13 }, (_, i) => 2010 + i).map((year) => (
           <button
             key={year}
-            className="first:mt-4 first:ml-4 bg-white shadow-md rounded-lg p-2 cursor-pointer hover:bg-gray-200 transition-colors"
+            className="first:mt-4 first:ml-4 selection:bg-white shadow-md rounded-lg p-2 cursor-pointer hover:bg-gray-200 transition-colors"
+            onClick={() => onYearClick(year)}
           >
             {year}
           </button>

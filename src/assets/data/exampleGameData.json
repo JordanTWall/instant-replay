@@ -1,1 +1,1128 @@
-{"get":"games","parameters":{"season":"2022","team":"22"},"errors":[],"results":20,"response":[{"game":{"id":3916,"stage":"Pre Season","week":"Week 1","date":{"timezone":"UTC","date":"2022-08-13","time":"23:00","timestamp":1660431600},"venue":{"name":"Acrisure Stadium","city":"Pittsburgh"},"status":{"short":"FT","long":"Finished","timer":null}},"league":{"id":1,"name":"NFL","season":"2022","logo":"https:\/\/media.api-sports.io\/american-football\/leagues\/1.png","country":{"name":"USA","code":"US","flag":"https:\/\/media.api-sports.io\/flags\/us.svg"}},"teams":{"home":{"id":22,"name":"Pittsburgh Steelers","logo":"https:\/\/media.api-sports.io\/american-football\/teams\/22.png"},"away":{"id":23,"name":"Seattle Seahawks","logo":"https:\/\/media.api-sports.io\/american-football\/teams\/23.png"}},"scores":{"home":{"quarter_1":14,"quarter_2":3,"quarter_3":8,"quarter_4":7,"overtime":null,"total":32},"away":{"quarter_1":0,"quarter_2":10,"quarter_3":7,"quarter_4":8,"overtime":null,"total":25}}},{"game":{"id":3932,"stage":"Pre Season","week":"Week 2","date":{"timezone":"UTC","date":"2022-08-20","time":"23:00","timestamp":1661036400},"venue":{"name":"TIAA Bank Field","city":"Jacksonville"},"status":{"short":"FT","long":"Finished","timer":null}},"league":{"id":1,"name":"NFL","season":"2022","logo":"https:\/\/media.api-sports.io\/american-football\/leagues\/1.png","country":{"name":"USA","code":"US","flag":"https:\/\/media.api-sports.io\/flags\/us.svg"}},"teams":{"home":{"id":2,"name":"Jacksonville Jaguars","logo":"https:\/\/media.api-sports.io\/american-football\/teams\/2.png"},"away":{"id":22,"name":"Pittsburgh Steelers","logo":"https:\/\/media.api-sports.io\/american-football\/teams\/22.png"}},"scores":{"home":{"quarter_1":3,"quarter_2":3,"quarter_3":2,"quarter_4":7,"overtime":null,"total":15},"away":{"quarter_1":0,"quarter_2":7,"quarter_3":0,"quarter_4":9,"overtime":null,"total":16}}},{"game":{"id":3953,"stage":"Pre Season","week":"Week 3","date":{"timezone":"UTC","date":"2022-08-28","time":"20:30","timestamp":1661718600},"venue":{"name":"Acrisure Stadium","city":"Pittsburgh"},"status":{"short":"FT","long":"Finished","timer":null}},"league":{"id":1,"name":"NFL","season":"2022","logo":"https:\/\/media.api-sports.io\/american-football\/leagues\/1.png","country":{"name":"USA","code":"US","flag":"https:\/\/media.api-sports.io\/flags\/us.svg"}},"teams":{"home":{"id":22,"name":"Pittsburgh Steelers","logo":"https:\/\/media.api-sports.io\/american-football\/teams\/22.png"},"away":{"id":7,"name":"Detroit Lions","logo":"https:\/\/media.api-sports.io\/american-football\/teams\/7.png"}},"scores":{"home":{"quarter_1":3,"quarter_2":13,"quarter_3":0,"quarter_4":3,"overtime":null,"total":19},"away":{"quarter_1":0,"quarter_2":0,"quarter_3":3,"quarter_4":6,"overtime":null,"total":9}}},{"game":{"id":3957,"stage":"Regular Season","week":"Week 1","date":{"timezone":"UTC","date":"2022-09-11","time":"17:00","timestamp":1662915600},"venue":{"name":"Paycor Stadium","city":"Cincinnati"},"status":{"short":null,"long":"Final\/OT","timer":null}},"league":{"id":1,"name":"NFL","season":"2022","logo":"https:\/\/media.api-sports.io\/american-football\/leagues\/1.png","country":{"name":"USA","code":"US","flag":"https:\/\/media.api-sports.io\/flags\/us.svg"}},"teams":{"home":{"id":10,"name":"Cincinnati Bengals","logo":"https:\/\/media.api-sports.io\/american-football\/teams\/10.png"},"away":{"id":22,"name":"Pittsburgh Steelers","logo":"https:\/\/media.api-sports.io\/american-football\/teams\/22.png"}},"scores":{"home":{"quarter_1":3,"quarter_2":3,"quarter_3":8,"quarter_4":6,"overtime":0,"total":20},"away":{"quarter_1":10,"quarter_2":7,"quarter_3":0,"quarter_4":3,"overtime":3,"total":23}}},{"game":{"id":3975,"stage":"Regular Season","week":"Week 2","date":{"timezone":"UTC","date":"2022-09-18","time":"17:00","timestamp":1663520400},"venue":{"name":"Acrisure Stadium","city":"Pittsburgh"},"status":{"short":"FT","long":"Finished","timer":null}},"league":{"id":1,"name":"NFL","season":"2022","logo":"https:\/\/media.api-sports.io\/american-football\/leagues\/1.png","country":{"name":"USA","code":"US","flag":"https:\/\/media.api-sports.io\/flags\/us.svg"}},"teams":{"home":{"id":22,"name":"Pittsburgh Steelers","logo":"https:\/\/media.api-sports.io\/american-football\/teams\/22.png"},"away":{"id":3,"name":"New England Patriots","logo":"https:\/\/media.api-sports.io\/american-football\/teams\/3.png"}},"scores":{"home":{"quarter_1":0,"quarter_2":3,"quarter_3":3,"quarter_4":8,"overtime":null,"total":14},"away":{"quarter_1":3,"quarter_2":7,"quarter_3":7,"quarter_4":0,"overtime":null,"total":17}}},{"game":{"id":3986,"stage":"Regular Season","week":"Week 3","date":{"timezone":"UTC","date":"2022-09-23","time":"00:15","timestamp":1663892100},"venue":{"name":"FirstEnergy Stadium","city":"Cleveland"},"status":{"short":"FT","long":"Finished","timer":null}},"league":{"id":1,"name":"NFL","season":"2022","logo":"https:\/\/media.api-sports.io\/american-football\/leagues\/1.png","country":{"name":"USA","code":"US","flag":"https:\/\/media.api-sports.io\/flags\/us.svg"}},"teams":{"home":{"id":9,"name":"Cleveland Browns","logo":"https:\/\/media.api-sports.io\/american-football\/teams\/9.png"},"away":{"id":22,"name":"Pittsburgh Steelers","logo":"https:\/\/media.api-sports.io\/american-football\/teams\/22.png"}},"scores":{"home":{"quarter_1":7,"quarter_2":6,"quarter_3":3,"quarter_4":13,"overtime":null,"total":29},"away":{"quarter_1":0,"quarter_2":14,"quarter_3":0,"quarter_4":3,"overtime":null,"total":17}}},{"game":{"id":4010,"stage":"Regular Season","week":"Week 4","date":{"timezone":"UTC","date":"2022-10-02","time":"17:00","timestamp":1664730000},"venue":{"name":"Acrisure Stadium","city":"Pittsburgh"},"status":{"short":"FT","long":"Finished","timer":null}},"league":{"id":1,"name":"NFL","season":"2022","logo":"https:\/\/media.api-sports.io\/american-football\/leagues\/1.png","country":{"name":"USA","code":"US","flag":"https:\/\/media.api-sports.io\/flags\/us.svg"}},"teams":{"home":{"id":22,"name":"Pittsburgh Steelers","logo":"https:\/\/media.api-sports.io\/american-football\/teams\/22.png"},"away":{"id":13,"name":"New York Jets","logo":"https:\/\/media.api-sports.io\/american-football\/teams\/13.png"}},"scores":{"home":{"quarter_1":0,"quarter_2":6,"quarter_3":7,"quarter_4":7,"overtime":null,"total":20},"away":{"quarter_1":3,"quarter_2":7,"quarter_3":0,"quarter_4":14,"overtime":null,"total":24}}},{"game":{"id":4020,"stage":"Regular Season","week":"Week 5","date":{"timezone":"UTC","date":"2022-10-09","time":"17:00","timestamp":1665334800},"venue":{"name":"Highmark Stadium","city":"Orchard Park"},"status":{"short":"FT","long":"Finished","timer":null}},"league":{"id":1,"name":"NFL","season":"2022","logo":"https:\/\/media.api-sports.io\/american-football\/leagues\/1.png","country":{"name":"USA","code":"US","flag":"https:\/\/media.api-sports.io\/flags\/us.svg"}},"teams":{"home":{"id":20,"name":"Buffalo Bills","logo":"https:\/\/media.api-sports.io\/american-football\/teams\/20.png"},"away":{"id":22,"name":"Pittsburgh Steelers","logo":"https:\/\/media.api-sports.io\/american-football\/teams\/22.png"}},"scores":{"home":{"quarter_1":10,"quarter_2":21,"quarter_3":0,"quarter_4":7,"overtime":null,"total":38},"away":{"quarter_1":3,"quarter_2":0,"quarter_3":0,"quarter_4":0,"overtime":null,"total":3}}},{"game":{"id":4042,"stage":"Regular Season","week":"Week 6","date":{"timezone":"UTC","date":"2022-10-16","time":"17:00","timestamp":1665939600},"venue":{"name":"Acrisure Stadium","city":"Pittsburgh"},"status":{"short":"FT","long":"Finished","timer":null}},"league":{"id":1,"name":"NFL","season":"2022","logo":"https:\/\/media.api-sports.io\/american-football\/leagues\/1.png","country":{"name":"USA","code":"US","flag":"https:\/\/media.api-sports.io\/flags\/us.svg"}},"teams":{"home":{"id":22,"name":"Pittsburgh Steelers","logo":"https:\/\/media.api-sports.io\/american-football\/teams\/22.png"},"away":{"id":24,"name":"Tampa Bay Buccaneers","logo":"https:\/\/media.api-sports.io\/american-football\/teams\/24.png"}},"scores":{"home":{"quarter_1":7,"quarter_2":3,"quarter_3":3,"quarter_4":7,"overtime":null,"total":20},"away":{"quarter_1":3,"quarter_2":6,"quarter_3":3,"quarter_4":6,"overtime":null,"total":18}}},{"game":{"id":4060,"stage":"Regular Season","week":"Week 7","date":{"timezone":"UTC","date":"2022-10-24","time":"00:20","timestamp":1666570800},"venue":{"name":"Hard Rock Stadium","city":"Miami Gardens"},"status":{"short":"FT","long":"Finished","timer":null}},"league":{"id":1,"name":"NFL","season":"2022","logo":"https:\/\/media.api-sports.io\/american-football\/leagues\/1.png","country":{"name":"USA","code":"US","flag":"https:\/\/media.api-sports.io\/flags\/us.svg"}},"teams":{"home":{"id":25,"name":"Miami Dolphins","logo":"https:\/\/media.api-sports.io\/american-football\/teams\/25.png"},"away":{"id":22,"name":"Pittsburgh Steelers","logo":"https:\/\/media.api-sports.io\/american-football\/teams\/22.png"}},"scores":{"home":{"quarter_1":13,"quarter_2":3,"quarter_3":0,"quarter_4":0,"overtime":null,"total":16},"away":{"quarter_1":0,"quarter_2":10,"quarter_3":0,"quarter_4":0,"overtime":null,"total":10}}},{"game":{"id":4070,"stage":"Regular Season","week":"Week 8","date":{"timezone":"UTC","date":"2022-10-30","time":"17:00","timestamp":1667149200},"venue":{"name":"Lincoln Financial Field","city":"Philadelphia"},"status":{"short":"FT","long":"Finished","timer":null}},"league":{"id":1,"name":"NFL","season":"2022","logo":"https:\/\/media.api-sports.io\/american-football\/leagues\/1.png","country":{"name":"USA","code":"US","flag":"https:\/\/media.api-sports.io\/flags\/us.svg"}},"teams":{"home":{"id":12,"name":"Philadelphia Eagles","logo":"https:\/\/media.api-sports.io\/american-football\/teams\/12.png"},"away":{"id":22,"name":"Pittsburgh Steelers","logo":"https:\/\/media.api-sports.io\/american-football\/teams\/22.png"}},"scores":{"home":{"quarter_1":7,"quarter_2":14,"quarter_3":7,"quarter_4":7,"overtime":null,"total":35},"away":{"quarter_1":7,"quarter_2":3,"quarter_3":3,"quarter_4":0,"overtime":null,"total":13}}},{"game":{"id":4098,"stage":"Regular Season","week":"Week 10","date":{"timezone":"UTC","date":"2022-11-13","time":"18:00","timestamp":1668362400},"venue":{"name":"Acrisure Stadium","city":"Pittsburgh"},"status":{"short":"FT","long":"Finished","timer":null}},"league":{"id":1,"name":"NFL","season":"2022","logo":"https:\/\/media.api-sports.io\/american-football\/leagues\/1.png","country":{"name":"USA","code":"US","flag":"https:\/\/media.api-sports.io\/flags\/us.svg"}},"teams":{"home":{"id":22,"name":"Pittsburgh Steelers","logo":"https:\/\/media.api-sports.io\/american-football\/teams\/22.png"},"away":{"id":27,"name":"New Orleans Saints","logo":"https:\/\/media.api-sports.io\/american-football\/teams\/27.png"}},"scores":{"home":{"quarter_1":7,"quarter_2":3,"quarter_3":0,"quarter_4":10,"overtime":null,"total":20},"away":{"quarter_1":0,"quarter_2":10,"quarter_3":0,"quarter_4":0,"overtime":null,"total":10}}},{"game":{"id":4116,"stage":"Regular Season","week":"Week 11","date":{"timezone":"UTC","date":"2022-11-20","time":"21:25","timestamp":1668979500},"venue":{"name":"Acrisure Stadium","city":"Pittsburgh"},"status":{"short":"FT","long":"Finished","timer":null}},"league":{"id":1,"name":"NFL","season":"2022","logo":"https:\/\/media.api-sports.io\/american-football\/leagues\/1.png","country":{"name":"USA","code":"US","flag":"https:\/\/media.api-sports.io\/flags\/us.svg"}},"teams":{"home":{"id":22,"name":"Pittsburgh Steelers","logo":"https:\/\/media.api-sports.io\/american-football\/teams\/22.png"},"away":{"id":10,"name":"Cincinnati Bengals","logo":"https:\/\/media.api-sports.io\/american-football\/teams\/10.png"}},"scores":{"home":{"quarter_1":3,"quarter_2":17,"quarter_3":3,"quarter_4":7,"overtime":null,"total":30},"away":{"quarter_1":10,"quarter_2":7,"quarter_3":10,"quarter_4":10,"overtime":null,"total":37}}},{"game":{"id":4133,"stage":"Regular Season","week":"Week 12","date":{"timezone":"UTC","date":"2022-11-29","time":"01:15","timestamp":1669684500},"venue":{"name":"Lucas Oil Stadium","city":"Indianapolis"},"status":{"short":"FT","long":"Finished","timer":null}},"league":{"id":1,"name":"NFL","season":"2022","logo":"https:\/\/media.api-sports.io\/american-football\/leagues\/1.png","country":{"name":"USA","code":"US","flag":"https:\/\/media.api-sports.io\/flags\/us.svg"}},"teams":{"home":{"id":21,"name":"Indianapolis Colts","logo":"https:\/\/media.api-sports.io\/american-football\/teams\/21.png"},"away":{"id":22,"name":"Pittsburgh Steelers","logo":"https:\/\/media.api-sports.io\/american-football\/teams\/22.png"}},"scores":{"home":{"quarter_1":0,"quarter_2":3,"quarter_3":14,"quarter_4":0,"overtime":null,"total":17},"away":{"quarter_1":3,"quarter_2":13,"quarter_3":0,"quarter_4":8,"overtime":null,"total":24}}},{"game":{"id":4135,"stage":"Regular Season","week":"Week 13","date":{"timezone":"UTC","date":"2022-12-04","time":"18:00","timestamp":1670176800},"venue":{"name":"Mercedes-Benz Stadium","city":"Atlanta"},"status":{"short":"FT","long":"Finished","timer":null}},"league":{"id":1,"name":"NFL","season":"2022","logo":"https:\/\/media.api-sports.io\/american-football\/leagues\/1.png","country":{"name":"USA","code":"US","flag":"https:\/\/media.api-sports.io\/flags\/us.svg"}},"teams":{"home":{"id":8,"name":"Atlanta Falcons","logo":"https:\/\/media.api-sports.io\/american-football\/teams\/8.png"},"away":{"id":22,"name":"Pittsburgh Steelers","logo":"https:\/\/media.api-sports.io\/american-football\/teams\/22.png"}},"scores":{"home":{"quarter_1":0,"quarter_2":6,"quarter_3":7,"quarter_4":3,"overtime":null,"total":16},"away":{"quarter_1":3,"quarter_2":13,"quarter_3":3,"quarter_4":0,"overtime":null,"total":19}}},{"game":{"id":4156,"stage":"Regular Season","week":"Week 14","date":{"timezone":"UTC","date":"2022-12-11","time":"18:00","timestamp":1670781600},"venue":{"name":"Acrisure Stadium","city":"Pittsburgh"},"status":{"short":"FT","long":"Finished","timer":null}},"league":{"id":1,"name":"NFL","season":"2022","logo":"https:\/\/media.api-sports.io\/american-football\/leagues\/1.png","country":{"name":"USA","code":"US","flag":"https:\/\/media.api-sports.io\/flags\/us.svg"}},"teams":{"home":{"id":22,"name":"Pittsburgh Steelers","logo":"https:\/\/media.api-sports.io\/american-football\/teams\/22.png"},"away":{"id":5,"name":"Baltimore Ravens","logo":"https:\/\/media.api-sports.io\/american-football\/teams\/5.png"}},"scores":{"home":{"quarter_1":7,"quarter_2":0,"quarter_3":0,"quarter_4":7,"overtime":null,"total":14},"away":{"quarter_1":10,"quarter_2":3,"quarter_3":0,"quarter_4":3,"overtime":null,"total":16}}},{"game":{"id":4170,"stage":"Regular Season","week":"Week 15","date":{"timezone":"UTC","date":"2022-12-18","time":"18:00","timestamp":1671386400},"venue":{"name":"Bank of America Stadium","city":"Charlotte"},"status":{"short":"FT","long":"Finished","timer":null}},"league":{"id":1,"name":"NFL","season":"2022","logo":"https:\/\/media.api-sports.io\/american-football\/leagues\/1.png","country":{"name":"USA","code":"US","flag":"https:\/\/media.api-sports.io\/flags\/us.svg"}},"teams":{"home":{"id":19,"name":"Carolina Panthers","logo":"https:\/\/media.api-sports.io\/american-football\/teams\/19.png"},"away":{"id":22,"name":"Pittsburgh Steelers","logo":"https:\/\/media.api-sports.io\/american-football\/teams\/22.png"}},"scores":{"home":{"quarter_1":0,"quarter_2":7,"quarter_3":0,"quarter_4":9,"overtime":null,"total":16},"away":{"quarter_1":7,"quarter_2":7,"quarter_3":7,"quarter_4":3,"overtime":null,"total":24}}},{"game":{"id":4189,"stage":"Regular Season","week":"Week 16","date":{"timezone":"UTC","date":"2022-12-25","time":"01:15","timestamp":1671930900},"venue":{"name":"Acrisure Stadium","city":"Pittsburgh"},"status":{"short":"FT","long":"Finished","timer":null}},"league":{"id":1,"name":"NFL","season":"2022","logo":"https:\/\/media.api-sports.io\/american-football\/leagues\/1.png","country":{"name":"USA","code":"US","flag":"https:\/\/media.api-sports.io\/flags\/us.svg"}},"teams":{"home":{"id":22,"name":"Pittsburgh Steelers","logo":"https:\/\/media.api-sports.io\/american-football\/teams\/22.png"},"away":{"id":1,"name":"Las Vegas Raiders","logo":"https:\/\/media.api-sports.io\/american-football\/teams\/1.png"}},"scores":{"home":{"quarter_1":0,"quarter_2":3,"quarter_3":0,"quarter_4":10,"overtime":null,"total":13},"away":{"quarter_1":7,"quarter_2":3,"quarter_3":0,"quarter_4":0,"overtime":null,"total":10}}},{"game":{"id":4203,"stage":"Regular Season","week":"Week 17","date":{"timezone":"UTC","date":"2023-01-02","time":"01:20","timestamp":1672622400},"venue":{"name":"M&T Bank Stadium","city":"Baltimore"},"status":{"short":"FT","long":"Finished","timer":null}},"league":{"id":1,"name":"NFL","season":"2022","logo":"https:\/\/media.api-sports.io\/american-football\/leagues\/1.png","country":{"name":"USA","code":"US","flag":"https:\/\/media.api-sports.io\/flags\/us.svg"}},"teams":{"home":{"id":5,"name":"Baltimore Ravens","logo":"https:\/\/media.api-sports.io\/american-football\/teams\/5.png"},"away":{"id":22,"name":"Pittsburgh Steelers","logo":"https:\/\/media.api-sports.io\/american-football\/teams\/22.png"}},"scores":{"home":{"quarter_1":0,"quarter_2":10,"quarter_3":3,"quarter_4":0,"overtime":null,"total":13},"away":{"quarter_1":3,"quarter_2":0,"quarter_3":3,"quarter_4":10,"overtime":null,"total":16}}},{"game":{"id":4221,"stage":"Regular Season","week":"Week 18","date":{"timezone":"UTC","date":"2023-01-08","time":"18:00","timestamp":1673200800},"venue":{"name":"Acrisure Stadium","city":"Pittsburgh"},"status":{"short":"FT","long":"Finished","timer":null}},"league":{"id":1,"name":"NFL","season":"2022","logo":"https:\/\/media.api-sports.io\/american-football\/leagues\/1.png","country":{"name":"USA","code":"US","flag":"https:\/\/media.api-sports.io\/flags\/us.svg"}},"teams":{"home":{"id":22,"name":"Pittsburgh Steelers","logo":"https:\/\/media.api-sports.io\/american-football\/teams\/22.png"},"away":{"id":9,"name":"Cleveland Browns","logo":"https:\/\/media.api-sports.io\/american-football\/teams\/9.png"}},"scores":{"home":{"quarter_1":0,"quarter_2":10,"quarter_3":10,"quarter_4":8,"overtime":null,"total":28},"away":{"quarter_1":0,"quarter_2":7,"quarter_3":0,"quarter_4":7,"overtime":null,"total":14}}}]} 
+{
+  "get": "games",
+  "parameters": { "season": "2022", "team": "22" },
+  "errors": [],
+  "results": 20,
+  "response": [
+    {
+      "game": {
+        "id": 3916,
+        "stage": "Pre Season",
+        "week": "Week 1",
+        "date": {
+          "timezone": "UTC",
+          "date": "2022-08-13",
+          "time": "23:00",
+          "timestamp": 1660431600
+        },
+        "venue": { "name": "Acrisure Stadium", "city": "Pittsburgh" },
+        "status": { "short": "FT", "long": "Finished", "timer": null }
+      },
+      "league": {
+        "id": 1,
+        "name": "NFL",
+        "season": "2022",
+        "logo": "https://media.api-sports.io/american-football/leagues/1.png",
+        "country": {
+          "name": "USA",
+          "code": "US",
+          "flag": "https://media.api-sports.io/flags/us.svg"
+        }
+      },
+      "teams": {
+        "home": {
+          "id": 22,
+          "name": "Pittsburgh Steelers",
+          "logo": "https://media.api-sports.io/american-football/teams/22.png"
+        },
+        "away": {
+          "id": 23,
+          "name": "Seattle Seahawks",
+          "logo": "https://media.api-sports.io/american-football/teams/23.png"
+        }
+      },
+      "scores": {
+        "home": {
+          "quarter_1": 14,
+          "quarter_2": 3,
+          "quarter_3": 8,
+          "quarter_4": 7,
+          "overtime": null,
+          "total": 32
+        },
+        "away": {
+          "quarter_1": 0,
+          "quarter_2": 10,
+          "quarter_3": 7,
+          "quarter_4": 8,
+          "overtime": null,
+          "total": 25
+        }
+      }
+    },
+    {
+      "game": {
+        "id": 3932,
+        "stage": "Pre Season",
+        "week": "Week 2",
+        "date": {
+          "timezone": "UTC",
+          "date": "2022-08-20",
+          "time": "23:00",
+          "timestamp": 1661036400
+        },
+        "venue": { "name": "TIAA Bank Field", "city": "Jacksonville" },
+        "status": { "short": "FT", "long": "Finished", "timer": null }
+      },
+      "league": {
+        "id": 1,
+        "name": "NFL",
+        "season": "2022",
+        "logo": "https://media.api-sports.io/american-football/leagues/1.png",
+        "country": {
+          "name": "USA",
+          "code": "US",
+          "flag": "https://media.api-sports.io/flags/us.svg"
+        }
+      },
+      "teams": {
+        "home": {
+          "id": 2,
+          "name": "Jacksonville Jaguars",
+          "logo": "https://media.api-sports.io/american-football/teams/2.png"
+        },
+        "away": {
+          "id": 22,
+          "name": "Pittsburgh Steelers",
+          "logo": "https://media.api-sports.io/american-football/teams/22.png"
+        }
+      },
+      "scores": {
+        "home": {
+          "quarter_1": 3,
+          "quarter_2": 3,
+          "quarter_3": 2,
+          "quarter_4": 7,
+          "overtime": null,
+          "total": 15
+        },
+        "away": {
+          "quarter_1": 0,
+          "quarter_2": 7,
+          "quarter_3": 0,
+          "quarter_4": 9,
+          "overtime": null,
+          "total": 16
+        }
+      }
+    },
+    {
+      "game": {
+        "id": 3953,
+        "stage": "Pre Season",
+        "week": "Week 3",
+        "date": {
+          "timezone": "UTC",
+          "date": "2022-08-28",
+          "time": "20:30",
+          "timestamp": 1661718600
+        },
+        "venue": { "name": "Acrisure Stadium", "city": "Pittsburgh" },
+        "status": { "short": "FT", "long": "Finished", "timer": null }
+      },
+      "league": {
+        "id": 1,
+        "name": "NFL",
+        "season": "2022",
+        "logo": "https://media.api-sports.io/american-football/leagues/1.png",
+        "country": {
+          "name": "USA",
+          "code": "US",
+          "flag": "https://media.api-sports.io/flags/us.svg"
+        }
+      },
+      "teams": {
+        "home": {
+          "id": 22,
+          "name": "Pittsburgh Steelers",
+          "logo": "https://media.api-sports.io/american-football/teams/22.png"
+        },
+        "away": {
+          "id": 7,
+          "name": "Detroit Lions",
+          "logo": "https://media.api-sports.io/american-football/teams/7.png"
+        }
+      },
+      "scores": {
+        "home": {
+          "quarter_1": 3,
+          "quarter_2": 13,
+          "quarter_3": 0,
+          "quarter_4": 3,
+          "overtime": null,
+          "total": 19
+        },
+        "away": {
+          "quarter_1": 0,
+          "quarter_2": 0,
+          "quarter_3": 3,
+          "quarter_4": 6,
+          "overtime": null,
+          "total": 9
+        }
+      }
+    },
+    {
+      "game": {
+        "id": 3957,
+        "stage": "Regular Season",
+        "week": "Week 1",
+        "date": {
+          "timezone": "UTC",
+          "date": "2022-09-11",
+          "time": "17:00",
+          "timestamp": 1662915600
+        },
+        "venue": { "name": "Paycor Stadium", "city": "Cincinnati" },
+        "status": { "short": null, "long": "Final/OT", "timer": null }
+      },
+      "league": {
+        "id": 1,
+        "name": "NFL",
+        "season": "2022",
+        "logo": "https://media.api-sports.io/american-football/leagues/1.png",
+        "country": {
+          "name": "USA",
+          "code": "US",
+          "flag": "https://media.api-sports.io/flags/us.svg"
+        }
+      },
+      "teams": {
+        "home": {
+          "id": 10,
+          "name": "Cincinnati Bengals",
+          "logo": "https://media.api-sports.io/american-football/teams/10.png"
+        },
+        "away": {
+          "id": 22,
+          "name": "Pittsburgh Steelers",
+          "logo": "https://media.api-sports.io/american-football/teams/22.png"
+        }
+      },
+      "scores": {
+        "home": {
+          "quarter_1": 3,
+          "quarter_2": 3,
+          "quarter_3": 8,
+          "quarter_4": 6,
+          "overtime": 0,
+          "total": 20
+        },
+        "away": {
+          "quarter_1": 10,
+          "quarter_2": 7,
+          "quarter_3": 0,
+          "quarter_4": 3,
+          "overtime": 3,
+          "total": 23
+        }
+      }
+    },
+    {
+      "game": {
+        "id": 3975,
+        "stage": "Regular Season",
+        "week": "Week 2",
+        "date": {
+          "timezone": "UTC",
+          "date": "2022-09-18",
+          "time": "17:00",
+          "timestamp": 1663520400
+        },
+        "venue": { "name": "Acrisure Stadium", "city": "Pittsburgh" },
+        "status": { "short": "FT", "long": "Finished", "timer": null }
+      },
+      "league": {
+        "id": 1,
+        "name": "NFL",
+        "season": "2022",
+        "logo": "https://media.api-sports.io/american-football/leagues/1.png",
+        "country": {
+          "name": "USA",
+          "code": "US",
+          "flag": "https://media.api-sports.io/flags/us.svg"
+        }
+      },
+      "teams": {
+        "home": {
+          "id": 22,
+          "name": "Pittsburgh Steelers",
+          "logo": "https://media.api-sports.io/american-football/teams/22.png"
+        },
+        "away": {
+          "id": 3,
+          "name": "New England Patriots",
+          "logo": "https://media.api-sports.io/american-football/teams/3.png"
+        }
+      },
+      "scores": {
+        "home": {
+          "quarter_1": 0,
+          "quarter_2": 3,
+          "quarter_3": 3,
+          "quarter_4": 8,
+          "overtime": null,
+          "total": 14
+        },
+        "away": {
+          "quarter_1": 3,
+          "quarter_2": 7,
+          "quarter_3": 7,
+          "quarter_4": 0,
+          "overtime": null,
+          "total": 17
+        }
+      }
+    },
+    {
+      "game": {
+        "id": 3986,
+        "stage": "Regular Season",
+        "week": "Week 3",
+        "date": {
+          "timezone": "UTC",
+          "date": "2022-09-23",
+          "time": "00:15",
+          "timestamp": 1663892100
+        },
+        "venue": { "name": "FirstEnergy Stadium", "city": "Cleveland" },
+        "status": { "short": "FT", "long": "Finished", "timer": null }
+      },
+      "league": {
+        "id": 1,
+        "name": "NFL",
+        "season": "2022",
+        "logo": "https://media.api-sports.io/american-football/leagues/1.png",
+        "country": {
+          "name": "USA",
+          "code": "US",
+          "flag": "https://media.api-sports.io/flags/us.svg"
+        }
+      },
+      "teams": {
+        "home": {
+          "id": 9,
+          "name": "Cleveland Browns",
+          "logo": "https://media.api-sports.io/american-football/teams/9.png"
+        },
+        "away": {
+          "id": 22,
+          "name": "Pittsburgh Steelers",
+          "logo": "https://media.api-sports.io/american-football/teams/22.png"
+        }
+      },
+      "scores": {
+        "home": {
+          "quarter_1": 7,
+          "quarter_2": 6,
+          "quarter_3": 3,
+          "quarter_4": 13,
+          "overtime": null,
+          "total": 29
+        },
+        "away": {
+          "quarter_1": 0,
+          "quarter_2": 14,
+          "quarter_3": 0,
+          "quarter_4": 3,
+          "overtime": null,
+          "total": 17
+        }
+      }
+    },
+    {
+      "game": {
+        "id": 4010,
+        "stage": "Regular Season",
+        "week": "Week 4",
+        "date": {
+          "timezone": "UTC",
+          "date": "2022-10-02",
+          "time": "17:00",
+          "timestamp": 1664730000
+        },
+        "venue": { "name": "Acrisure Stadium", "city": "Pittsburgh" },
+        "status": { "short": "FT", "long": "Finished", "timer": null }
+      },
+      "league": {
+        "id": 1,
+        "name": "NFL",
+        "season": "2022",
+        "logo": "https://media.api-sports.io/american-football/leagues/1.png",
+        "country": {
+          "name": "USA",
+          "code": "US",
+          "flag": "https://media.api-sports.io/flags/us.svg"
+        }
+      },
+      "teams": {
+        "home": {
+          "id": 22,
+          "name": "Pittsburgh Steelers",
+          "logo": "https://media.api-sports.io/american-football/teams/22.png"
+        },
+        "away": {
+          "id": 13,
+          "name": "New York Jets",
+          "logo": "https://media.api-sports.io/american-football/teams/13.png"
+        }
+      },
+      "scores": {
+        "home": {
+          "quarter_1": 0,
+          "quarter_2": 6,
+          "quarter_3": 7,
+          "quarter_4": 7,
+          "overtime": null,
+          "total": 20
+        },
+        "away": {
+          "quarter_1": 3,
+          "quarter_2": 7,
+          "quarter_3": 0,
+          "quarter_4": 14,
+          "overtime": null,
+          "total": 24
+        }
+      }
+    },
+    {
+      "game": {
+        "id": 4020,
+        "stage": "Regular Season",
+        "week": "Week 5",
+        "date": {
+          "timezone": "UTC",
+          "date": "2022-10-09",
+          "time": "17:00",
+          "timestamp": 1665334800
+        },
+        "venue": { "name": "Highmark Stadium", "city": "Orchard Park" },
+        "status": { "short": "FT", "long": "Finished", "timer": null }
+      },
+      "league": {
+        "id": 1,
+        "name": "NFL",
+        "season": "2022",
+        "logo": "https://media.api-sports.io/american-football/leagues/1.png",
+        "country": {
+          "name": "USA",
+          "code": "US",
+          "flag": "https://media.api-sports.io/flags/us.svg"
+        }
+      },
+      "teams": {
+        "home": {
+          "id": 20,
+          "name": "Buffalo Bills",
+          "logo": "https://media.api-sports.io/american-football/teams/20.png"
+        },
+        "away": {
+          "id": 22,
+          "name": "Pittsburgh Steelers",
+          "logo": "https://media.api-sports.io/american-football/teams/22.png"
+        }
+      },
+      "scores": {
+        "home": {
+          "quarter_1": 10,
+          "quarter_2": 21,
+          "quarter_3": 0,
+          "quarter_4": 7,
+          "overtime": null,
+          "total": 38
+        },
+        "away": {
+          "quarter_1": 3,
+          "quarter_2": 0,
+          "quarter_3": 0,
+          "quarter_4": 0,
+          "overtime": null,
+          "total": 3
+        }
+      }
+    },
+    {
+      "game": {
+        "id": 4042,
+        "stage": "Regular Season",
+        "week": "Week 6",
+        "date": {
+          "timezone": "UTC",
+          "date": "2022-10-16",
+          "time": "17:00",
+          "timestamp": 1665939600
+        },
+        "venue": { "name": "Acrisure Stadium", "city": "Pittsburgh" },
+        "status": { "short": "FT", "long": "Finished", "timer": null }
+      },
+      "league": {
+        "id": 1,
+        "name": "NFL",
+        "season": "2022",
+        "logo": "https://media.api-sports.io/american-football/leagues/1.png",
+        "country": {
+          "name": "USA",
+          "code": "US",
+          "flag": "https://media.api-sports.io/flags/us.svg"
+        }
+      },
+      "teams": {
+        "home": {
+          "id": 22,
+          "name": "Pittsburgh Steelers",
+          "logo": "https://media.api-sports.io/american-football/teams/22.png"
+        },
+        "away": {
+          "id": 24,
+          "name": "Tampa Bay Buccaneers",
+          "logo": "https://media.api-sports.io/american-football/teams/24.png"
+        }
+      },
+      "scores": {
+        "home": {
+          "quarter_1": 7,
+          "quarter_2": 3,
+          "quarter_3": 3,
+          "quarter_4": 7,
+          "overtime": null,
+          "total": 20
+        },
+        "away": {
+          "quarter_1": 3,
+          "quarter_2": 6,
+          "quarter_3": 3,
+          "quarter_4": 6,
+          "overtime": null,
+          "total": 18
+        }
+      }
+    },
+    {
+      "game": {
+        "id": 4060,
+        "stage": "Regular Season",
+        "week": "Week 7",
+        "date": {
+          "timezone": "UTC",
+          "date": "2022-10-24",
+          "time": "00:20",
+          "timestamp": 1666570800
+        },
+        "venue": { "name": "Hard Rock Stadium", "city": "Miami Gardens" },
+        "status": { "short": "FT", "long": "Finished", "timer": null }
+      },
+      "league": {
+        "id": 1,
+        "name": "NFL",
+        "season": "2022",
+        "logo": "https://media.api-sports.io/american-football/leagues/1.png",
+        "country": {
+          "name": "USA",
+          "code": "US",
+          "flag": "https://media.api-sports.io/flags/us.svg"
+        }
+      },
+      "teams": {
+        "home": {
+          "id": 25,
+          "name": "Miami Dolphins",
+          "logo": "https://media.api-sports.io/american-football/teams/25.png"
+        },
+        "away": {
+          "id": 22,
+          "name": "Pittsburgh Steelers",
+          "logo": "https://media.api-sports.io/american-football/teams/22.png"
+        }
+      },
+      "scores": {
+        "home": {
+          "quarter_1": 13,
+          "quarter_2": 3,
+          "quarter_3": 0,
+          "quarter_4": 0,
+          "overtime": null,
+          "total": 16
+        },
+        "away": {
+          "quarter_1": 0,
+          "quarter_2": 10,
+          "quarter_3": 0,
+          "quarter_4": 0,
+          "overtime": null,
+          "total": 10
+        }
+      }
+    },
+    {
+      "game": {
+        "id": 4070,
+        "stage": "Regular Season",
+        "week": "Week 8",
+        "date": {
+          "timezone": "UTC",
+          "date": "2022-10-30",
+          "time": "17:00",
+          "timestamp": 1667149200
+        },
+        "venue": { "name": "Lincoln Financial Field", "city": "Philadelphia" },
+        "status": { "short": "FT", "long": "Finished", "timer": null }
+      },
+      "league": {
+        "id": 1,
+        "name": "NFL",
+        "season": "2022",
+        "logo": "https://media.api-sports.io/american-football/leagues/1.png",
+        "country": {
+          "name": "USA",
+          "code": "US",
+          "flag": "https://media.api-sports.io/flags/us.svg"
+        }
+      },
+      "teams": {
+        "home": {
+          "id": 12,
+          "name": "Philadelphia Eagles",
+          "logo": "https://media.api-sports.io/american-football/teams/12.png"
+        },
+        "away": {
+          "id": 22,
+          "name": "Pittsburgh Steelers",
+          "logo": "https://media.api-sports.io/american-football/teams/22.png"
+        }
+      },
+      "scores": {
+        "home": {
+          "quarter_1": 7,
+          "quarter_2": 14,
+          "quarter_3": 7,
+          "quarter_4": 7,
+          "overtime": null,
+          "total": 35
+        },
+        "away": {
+          "quarter_1": 7,
+          "quarter_2": 3,
+          "quarter_3": 3,
+          "quarter_4": 0,
+          "overtime": null,
+          "total": 13
+        }
+      }
+    },
+    {
+      "game": {
+        "id": 4098,
+        "stage": "Regular Season",
+        "week": "Week 10",
+        "date": {
+          "timezone": "UTC",
+          "date": "2022-11-13",
+          "time": "18:00",
+          "timestamp": 1668362400
+        },
+        "venue": { "name": "Acrisure Stadium", "city": "Pittsburgh" },
+        "status": { "short": "FT", "long": "Finished", "timer": null }
+      },
+      "league": {
+        "id": 1,
+        "name": "NFL",
+        "season": "2022",
+        "logo": "https://media.api-sports.io/american-football/leagues/1.png",
+        "country": {
+          "name": "USA",
+          "code": "US",
+          "flag": "https://media.api-sports.io/flags/us.svg"
+        }
+      },
+      "teams": {
+        "home": {
+          "id": 22,
+          "name": "Pittsburgh Steelers",
+          "logo": "https://media.api-sports.io/american-football/teams/22.png"
+        },
+        "away": {
+          "id": 27,
+          "name": "New Orleans Saints",
+          "logo": "https://media.api-sports.io/american-football/teams/27.png"
+        }
+      },
+      "scores": {
+        "home": {
+          "quarter_1": 7,
+          "quarter_2": 3,
+          "quarter_3": 0,
+          "quarter_4": 10,
+          "overtime": null,
+          "total": 20
+        },
+        "away": {
+          "quarter_1": 0,
+          "quarter_2": 10,
+          "quarter_3": 0,
+          "quarter_4": 0,
+          "overtime": null,
+          "total": 10
+        }
+      }
+    },
+    {
+      "game": {
+        "id": 4116,
+        "stage": "Regular Season",
+        "week": "Week 11",
+        "date": {
+          "timezone": "UTC",
+          "date": "2022-11-20",
+          "time": "21:25",
+          "timestamp": 1668979500
+        },
+        "venue": { "name": "Acrisure Stadium", "city": "Pittsburgh" },
+        "status": { "short": "FT", "long": "Finished", "timer": null }
+      },
+      "league": {
+        "id": 1,
+        "name": "NFL",
+        "season": "2022",
+        "logo": "https://media.api-sports.io/american-football/leagues/1.png",
+        "country": {
+          "name": "USA",
+          "code": "US",
+          "flag": "https://media.api-sports.io/flags/us.svg"
+        }
+      },
+      "teams": {
+        "home": {
+          "id": 22,
+          "name": "Pittsburgh Steelers",
+          "logo": "https://media.api-sports.io/american-football/teams/22.png"
+        },
+        "away": {
+          "id": 10,
+          "name": "Cincinnati Bengals",
+          "logo": "https://media.api-sports.io/american-football/teams/10.png"
+        }
+      },
+      "scores": {
+        "home": {
+          "quarter_1": 3,
+          "quarter_2": 17,
+          "quarter_3": 3,
+          "quarter_4": 7,
+          "overtime": null,
+          "total": 30
+        },
+        "away": {
+          "quarter_1": 10,
+          "quarter_2": 7,
+          "quarter_3": 10,
+          "quarter_4": 10,
+          "overtime": null,
+          "total": 37
+        }
+      }
+    },
+    {
+      "game": {
+        "id": 4133,
+        "stage": "Regular Season",
+        "week": "Week 12",
+        "date": {
+          "timezone": "UTC",
+          "date": "2022-11-29",
+          "time": "01:15",
+          "timestamp": 1669684500
+        },
+        "venue": { "name": "Lucas Oil Stadium", "city": "Indianapolis" },
+        "status": { "short": "FT", "long": "Finished", "timer": null }
+      },
+      "league": {
+        "id": 1,
+        "name": "NFL",
+        "season": "2022",
+        "logo": "https://media.api-sports.io/american-football/leagues/1.png",
+        "country": {
+          "name": "USA",
+          "code": "US",
+          "flag": "https://media.api-sports.io/flags/us.svg"
+        }
+      },
+      "teams": {
+        "home": {
+          "id": 21,
+          "name": "Indianapolis Colts",
+          "logo": "https://media.api-sports.io/american-football/teams/21.png"
+        },
+        "away": {
+          "id": 22,
+          "name": "Pittsburgh Steelers",
+          "logo": "https://media.api-sports.io/american-football/teams/22.png"
+        }
+      },
+      "scores": {
+        "home": {
+          "quarter_1": 0,
+          "quarter_2": 3,
+          "quarter_3": 14,
+          "quarter_4": 0,
+          "overtime": null,
+          "total": 17
+        },
+        "away": {
+          "quarter_1": 3,
+          "quarter_2": 13,
+          "quarter_3": 0,
+          "quarter_4": 8,
+          "overtime": null,
+          "total": 24
+        }
+      }
+    },
+    {
+      "game": {
+        "id": 4135,
+        "stage": "Regular Season",
+        "week": "Week 13",
+        "date": {
+          "timezone": "UTC",
+          "date": "2022-12-04",
+          "time": "18:00",
+          "timestamp": 1670176800
+        },
+        "venue": { "name": "Mercedes-Benz Stadium", "city": "Atlanta" },
+        "status": { "short": "FT", "long": "Finished", "timer": null }
+      },
+      "league": {
+        "id": 1,
+        "name": "NFL",
+        "season": "2022",
+        "logo": "https://media.api-sports.io/american-football/leagues/1.png",
+        "country": {
+          "name": "USA",
+          "code": "US",
+          "flag": "https://media.api-sports.io/flags/us.svg"
+        }
+      },
+      "teams": {
+        "home": {
+          "id": 8,
+          "name": "Atlanta Falcons",
+          "logo": "https://media.api-sports.io/american-football/teams/8.png"
+        },
+        "away": {
+          "id": 22,
+          "name": "Pittsburgh Steelers",
+          "logo": "https://media.api-sports.io/american-football/teams/22.png"
+        }
+      },
+      "scores": {
+        "home": {
+          "quarter_1": 0,
+          "quarter_2": 6,
+          "quarter_3": 7,
+          "quarter_4": 3,
+          "overtime": null,
+          "total": 16
+        },
+        "away": {
+          "quarter_1": 3,
+          "quarter_2": 13,
+          "quarter_3": 3,
+          "quarter_4": 0,
+          "overtime": null,
+          "total": 19
+        }
+      }
+    },
+    {
+      "game": {
+        "id": 4156,
+        "stage": "Regular Season",
+        "week": "Week 14",
+        "date": {
+          "timezone": "UTC",
+          "date": "2022-12-11",
+          "time": "18:00",
+          "timestamp": 1670781600
+        },
+        "venue": { "name": "Acrisure Stadium", "city": "Pittsburgh" },
+        "status": { "short": "FT", "long": "Finished", "timer": null }
+      },
+      "league": {
+        "id": 1,
+        "name": "NFL",
+        "season": "2022",
+        "logo": "https://media.api-sports.io/american-football/leagues/1.png",
+        "country": {
+          "name": "USA",
+          "code": "US",
+          "flag": "https://media.api-sports.io/flags/us.svg"
+        }
+      },
+      "teams": {
+        "home": {
+          "id": 22,
+          "name": "Pittsburgh Steelers",
+          "logo": "https://media.api-sports.io/american-football/teams/22.png"
+        },
+        "away": {
+          "id": 5,
+          "name": "Baltimore Ravens",
+          "logo": "https://media.api-sports.io/american-football/teams/5.png"
+        }
+      },
+      "scores": {
+        "home": {
+          "quarter_1": 7,
+          "quarter_2": 0,
+          "quarter_3": 0,
+          "quarter_4": 7,
+          "overtime": null,
+          "total": 14
+        },
+        "away": {
+          "quarter_1": 10,
+          "quarter_2": 3,
+          "quarter_3": 0,
+          "quarter_4": 3,
+          "overtime": null,
+          "total": 16
+        }
+      }
+    },
+    {
+      "game": {
+        "id": 4170,
+        "stage": "Regular Season",
+        "week": "Week 15",
+        "date": {
+          "timezone": "UTC",
+          "date": "2022-12-18",
+          "time": "18:00",
+          "timestamp": 1671386400
+        },
+        "venue": { "name": "Bank of America Stadium", "city": "Charlotte" },
+        "status": { "short": "FT", "long": "Finished", "timer": null }
+      },
+      "league": {
+        "id": 1,
+        "name": "NFL",
+        "season": "2022",
+        "logo": "https://media.api-sports.io/american-football/leagues/1.png",
+        "country": {
+          "name": "USA",
+          "code": "US",
+          "flag": "https://media.api-sports.io/flags/us.svg"
+        }
+      },
+      "teams": {
+        "home": {
+          "id": 19,
+          "name": "Carolina Panthers",
+          "logo": "https://media.api-sports.io/american-football/teams/19.png"
+        },
+        "away": {
+          "id": 22,
+          "name": "Pittsburgh Steelers",
+          "logo": "https://media.api-sports.io/american-football/teams/22.png"
+        }
+      },
+      "scores": {
+        "home": {
+          "quarter_1": 0,
+          "quarter_2": 7,
+          "quarter_3": 0,
+          "quarter_4": 9,
+          "overtime": null,
+          "total": 16
+        },
+        "away": {
+          "quarter_1": 7,
+          "quarter_2": 7,
+          "quarter_3": 7,
+          "quarter_4": 3,
+          "overtime": null,
+          "total": 24
+        }
+      }
+    },
+    {
+      "game": {
+        "id": 4189,
+        "stage": "Regular Season",
+        "week": "Week 16",
+        "date": {
+          "timezone": "UTC",
+          "date": "2022-12-25",
+          "time": "01:15",
+          "timestamp": 1671930900
+        },
+        "venue": { "name": "Acrisure Stadium", "city": "Pittsburgh" },
+        "status": { "short": "FT", "long": "Finished", "timer": null }
+      },
+      "league": {
+        "id": 1,
+        "name": "NFL",
+        "season": "2022",
+        "logo": "https://media.api-sports.io/american-football/leagues/1.png",
+        "country": {
+          "name": "USA",
+          "code": "US",
+          "flag": "https://media.api-sports.io/flags/us.svg"
+        }
+      },
+      "teams": {
+        "home": {
+          "id": 22,
+          "name": "Pittsburgh Steelers",
+          "logo": "https://media.api-sports.io/american-football/teams/22.png"
+        },
+        "away": {
+          "id": 1,
+          "name": "Las Vegas Raiders",
+          "logo": "https://media.api-sports.io/american-football/teams/1.png"
+        }
+      },
+      "scores": {
+        "home": {
+          "quarter_1": 0,
+          "quarter_2": 3,
+          "quarter_3": 0,
+          "quarter_4": 10,
+          "overtime": null,
+          "total": 13
+        },
+        "away": {
+          "quarter_1": 7,
+          "quarter_2": 3,
+          "quarter_3": 0,
+          "quarter_4": 0,
+          "overtime": null,
+          "total": 10
+        }
+      }
+    },
+    {
+      "game": {
+        "id": 4203,
+        "stage": "Regular Season",
+        "week": "Week 17",
+        "date": {
+          "timezone": "UTC",
+          "date": "2023-01-02",
+          "time": "01:20",
+          "timestamp": 1672622400
+        },
+        "venue": { "name": "M&T Bank Stadium", "city": "Baltimore" },
+        "status": { "short": "FT", "long": "Finished", "timer": null }
+      },
+      "league": {
+        "id": 1,
+        "name": "NFL",
+        "season": "2022",
+        "logo": "https://media.api-sports.io/american-football/leagues/1.png",
+        "country": {
+          "name": "USA",
+          "code": "US",
+          "flag": "https://media.api-sports.io/flags/us.svg"
+        }
+      },
+      "teams": {
+        "home": {
+          "id": 5,
+          "name": "Baltimore Ravens",
+          "logo": "https://media.api-sports.io/american-football/teams/5.png"
+        },
+        "away": {
+          "id": 22,
+          "name": "Pittsburgh Steelers",
+          "logo": "https://media.api-sports.io/american-football/teams/22.png"
+        }
+      },
+      "scores": {
+        "home": {
+          "quarter_1": 0,
+          "quarter_2": 10,
+          "quarter_3": 3,
+          "quarter_4": 0,
+          "overtime": null,
+          "total": 13
+        },
+        "away": {
+          "quarter_1": 3,
+          "quarter_2": 0,
+          "quarter_3": 3,
+          "quarter_4": 10,
+          "overtime": null,
+          "total": 16
+        }
+      }
+    },
+    {
+      "game": {
+        "id": 4221,
+        "stage": "Regular Season",
+        "week": "Week 18",
+        "date": {
+          "timezone": "UTC",
+          "date": "2023-01-08",
+          "time": "18:00",
+          "timestamp": 1673200800
+        },
+        "venue": { "name": "Acrisure Stadium", "city": "Pittsburgh" },
+        "status": { "short": "FT", "long": "Finished", "timer": null }
+      },
+      "league": {
+        "id": 1,
+        "name": "NFL",
+        "season": "2022",
+        "logo": "https://media.api-sports.io/american-football/leagues/1.png",
+        "country": {
+          "name": "USA",
+          "code": "US",
+          "flag": "https://media.api-sports.io/flags/us.svg"
+        }
+      },
+      "teams": {
+        "home": {
+          "id": 22,
+          "name": "Pittsburgh Steelers",
+          "logo": "https://media.api-sports.io/american-football/teams/22.png"
+        },
+        "away": {
+          "id": 9,
+          "name": "Cleveland Browns",
+          "logo": "https://media.api-sports.io/american-football/teams/9.png"
+        }
+      },
+      "scores": {
+        "home": {
+          "quarter_1": 0,
+          "quarter_2": 10,
+          "quarter_3": 10,
+          "quarter_4": 8,
+          "overtime": null,
+          "total": 28
+        },
+        "away": {
+          "quarter_1": 0,
+          "quarter_2": 7,
+          "quarter_3": 0,
+          "quarter_4": 7,
+          "overtime": null,
+          "total": 14
+        }
+      }
+    }
+  ]
+}
