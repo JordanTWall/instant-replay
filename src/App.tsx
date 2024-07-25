@@ -1,26 +1,35 @@
 // src/App.tsx
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Assuming you are using react-router
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Description from './components/Description';
+import TeamCard from './components/TeamCard';
 import NavBar from './components/NavBar';
+import teamsData from './assets/data/teams.json';
 
 const App: React.FC = () => {
+  const [showTeams, setShowTeams] = useState(false);
+
+  const handlePlayClick = () => {
+    setShowTeams(true);
+  };
+
+  const filteredTeams = teamsData.response.filter(team => team.city !== null).sort((a, b) => a.name.localeCompare(b.name));
+
   return (
     <Router>
       <div>
         <NavBar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
-        </Routes>
+        <Description onPlayClick={handlePlayClick} />
+        {showTeams && (
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-4">
+            {filteredTeams.map(team => (
+              <TeamCard key={team.id} name={team.name} logo={team.logo} />
+            ))}
+          </div>
+        )}
       </div>
     </Router>
   );
 };
-
-// Dummy components for the routes
-const Home: React.FC = () => <div>Home Page</div>;
-const About: React.FC = () => <div>About Page</div>;
-const Projects: React.FC = () => <div>Projects Page</div>;
 
 export default App;
