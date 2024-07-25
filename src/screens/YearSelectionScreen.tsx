@@ -1,6 +1,7 @@
 // src/screens/YearSelectionScreen.tsx
 import React from 'react';
 import TeamCard from '../components/TeamCard';
+import BackButton from '../components/BackButton';
 
 interface YearSelectionScreenProps {
   selectedTeam: any;
@@ -16,21 +17,14 @@ const YearSelectionScreen: React.FC<YearSelectionScreenProps> = ({ selectedTeam,
         {Array.from({ length: 13 }, (_, i) => 2010 + i).map((year) => (
           <button
             key={year}
-            className="first:mt-4 first:ml-4 selection:bg-white shadow-md rounded-lg p-2 cursor-pointer hover:bg-gray-200 transition-colors"
+            className="bg-white shadow-md rounded-lg p-2 cursor-pointer hover:bg-gray-200 transition-colors"
             onClick={() => onYearClick(year)}
           >
             {year}
           </button>
         ))}
       </div>
-      <div className="flex justify-center mt-8">
-        <button
-          onClick={onBackClick}
-          className="bg-red-600 text-white px-6 py-3 rounded-lg text-xl hover:bg-red-700 transition duration-300"
-        >
-          Back
-        </button>
-      </div>
+      <BackButton onClick={onBackClick} />
     </div>
   );
 };

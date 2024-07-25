@@ -1,6 +1,7 @@
 // src/screens/GameListScreen.tsx
 import React, { useState } from 'react';
 import GameCard from '../components/GameCard';
+import BackButton from '../components/BackButton';
 import exampleGameData from '../assets/data/exampleGameData.json';
 import { GameResponse, ExampleGameData } from '../types/GamaData';
 
@@ -21,12 +22,7 @@ const GameListScreen: React.FC<GameListScreenProps> = ({ onBackClick, selectedTe
 
   return (
     <div className="flex flex-col items-center w-full max-w-5xl mx-auto">
-      <button
-        onClick={onBackClick}
-        className="bg-red-600 text-white px-6 py-3 my-4 rounded-lg text-xl hover:bg-red-700 transition duration-300"
-      >
-        Back
-      </button>
+      <BackButton onClick={onBackClick} />
       <button
         onClick={toggleScores}
         className="bg-blue-500 text-white px-4 py-2 rounded mb-4"
