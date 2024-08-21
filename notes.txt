@@ -23,4 +23,6 @@ vite.config.ts: Vite configuration file.
 
 
 
+NOTE: NEED TO REMEMBER EDGE CASES. SUPERBOWL AND PLAYOFF "STAGES" AND "WEEK" ARE LISTED AS NULL. REPLACE WITH PLAYOFFS! OOH! you could just look up every superbowl for the past 14 years and hard code it in the program to recognize it as the superbowl, and every other null as playoffs. That's probably really smart, although not effecient .
 
+WE'RE GOING TO STEAL THE DECLARATION OF INDEPENDENCE!!!!! (i.e we're going to steal the database. )
