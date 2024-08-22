@@ -15,9 +15,10 @@ interface GameCardProps {
   };
   showScores: boolean;
   selectedTeam: string;
+  onClick: () => void; // Include this to handle clicks on the GameCard
 }
 
-const GameCard: React.FC<GameCardProps> = ({ game, showScores, selectedTeam }) => {
+const GameCard: React.FC<GameCardProps> = ({ game, showScores, selectedTeam, onClick }) => {
   const formatDate = (dateString: string) => {
     const options: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'long', day: 'numeric' };
     return new Date(dateString).toLocaleDateString(undefined, options);
@@ -29,7 +30,10 @@ const GameCard: React.FC<GameCardProps> = ({ game, showScores, selectedTeam }) =
   const versusSymbol = isHomeTeam ? "vs" : "@";
 
   return (
-    <div className="bg-white shadow-md rounded-lg p-4 mb-4 w-full max-w-3xl flex flex-col items-center text-center cursor-pointer hover:bg-gray-200 transition-colors">
+    <div 
+      className="bg-white shadow-md rounded-lg p-4 mb-4 w-full max-w-3xl flex flex-col items-center text-center cursor-pointer hover:bg-gray-200 transition-colors"
+      onClick={onClick} // Use the onClick prop here
+    >
       <div className="flex justify-between items-center mb-2 w-full ">
         <div className="w-1/5 flex justify-center">
           <img src={isHomeTeam ? game.homeTeamLogo : game.awayTeamLogo} alt={selectedTeam} className="w-10 h-10" />

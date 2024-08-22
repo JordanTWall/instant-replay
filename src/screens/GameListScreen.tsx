@@ -1,42 +1,21 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import GameCard from '../components/GameCard';
 import BackButton from '../components/BackButton';
-import { fetchGames } from '../services/APIinterface';
 
 interface GameListScreenProps {
   onBackClick: () => void;
   selectedTeam: string;
   selectedSeason: number;
+  onGameClick: (game: any) => void;
+  games: any[]; // Add games prop to GameListScreenProps
 }
 
-const GameListScreen: React.FC<GameListScreenProps> = ({ onBackClick, selectedTeam, selectedSeason }) => {
+const GameListScreen: React.FC<GameListScreenProps> = ({ onBackClick, selectedTeam, selectedSeason, onGameClick, games }) => {
   const [showScores, setShowScores] = useState(false);
-  const [games, setGames] = useState<any[]>([]); 
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        setLoading(true);
-        const gamesData = await fetchGames(selectedTeam, selectedSeason.toString()); // Use selectedSeason
-        setGames(gamesData);
-        setLoading(false);
-      } catch (err) {
-        setError('Failed to load games. Please try again later.');
-        setLoading(false);
-      }
-    };
-
-    fetchData();
-  }, [selectedTeam, selectedSeason]);
 
   const toggleScores = () => {
     setShowScores(!showScores);
   };
-
-  if (loading) return <p>Loading games...</p>;
-  if (error) return <p>{error}</p>;
 
   return (
     <div className="flex flex-col items-center w-full max-w-5xl mx-auto">
@@ -49,7 +28,13 @@ const GameListScreen: React.FC<GameListScreenProps> = ({ onBackClick, selectedTe
       </button>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
         {games.map((game, index) => (
-          <GameCard key={game.gameId} game={game} showScores={showScores} selectedTeam={selectedTeam} />
+          <GameCard
+            key={index}
+            game={game}
+            showScores={showScores} // Toggle score display based on state
+            selectedTeam={selectedTeam}
+            onClick={() => onGameClick(game)} // Pass the specific game object
+          />
         ))}
       </div>
     </div>
