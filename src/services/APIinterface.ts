@@ -14,3 +14,17 @@ export const fetchGames = async (teamName: string, season: string) => {
     throw err;
   }
 };
+
+export const fetchGameEvents = async (gameId: number) => {
+  try {
+    const response = await axios.get(`http://localhost:8080/instantreplay/api/events`, {
+      params: {
+        gameId: gameId
+      }
+    });
+    return response.data;
+  } catch (err) {
+    console.error('Failed to fetch game event data:', err);
+    throw err;
+  }
+};

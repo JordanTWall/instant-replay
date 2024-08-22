@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import GameCard from '../components/GameCard';
 import BackButton from '../components/BackButton';
-import { fetchGames } from '../services/fetchGames';
+import { fetchGames } from '../services/APIinterface';
 
 interface GameListScreenProps {
   onBackClick: () => void;
