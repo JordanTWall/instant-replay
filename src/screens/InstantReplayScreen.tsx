@@ -1,25 +1,13 @@
 // src/screens/InstantReplayScreen.tsx
 import React from 'react';
+import { GameObject } from '../types/GamaData'; // Import the new type
 import Scoreboard from '../components/Scoreboard';
-import { teamColors } from '../styles/teamColors'; // Import the TypeScript-based color key
+import { teamColors } from '../styles/teamColors'; 
 
 interface InstantReplayScreenProps {
   gameEvents: any;
   onBackClick: () => void;
-  game: {
-    gameId: number;
-    gameStage: string;
-    gameWeek: string;
-    gameDate: string;
-    homeTeamId: number; // Ensure this is a number type
-    homeTeamName: string;
-    homeTeamLogo: string;
-    awayTeamId: number; // Ensure this is a number type
-    awayTeamName: string;
-    awayTeamLogo: string;
-    homeTeamScore: number;
-    awayTeamScore: number;
-  };
+  game: GameObject; // Use the GameObject type here
   showScores: boolean;
   selectedTeam: string;
 }
@@ -36,7 +24,6 @@ const InstantReplayScreen: React.FC<InstantReplayScreenProps> = ({
     return new Date(dateString).toLocaleDateString(undefined, options);
   };
 
-  // Access team colors using the team IDs
   const homeTeamColors = teamColors[game.homeTeamId];
   const awayTeamColors = teamColors[game.awayTeamId];
 

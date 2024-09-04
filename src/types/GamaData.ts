@@ -20,6 +20,23 @@ export interface Game {
     };
   }
   
+  // src/types/GameObject.ts
+export interface GameObject {
+  gameId: number;
+  gameStage: string;
+  gameWeek: string;
+  gameDate: string;
+  homeTeamId: number;
+  homeTeamName: string;
+  homeTeamLogo: string;
+  awayTeamId: number;
+  awayTeamName: string;
+  awayTeamLogo: string;
+  homeTeamScore: number;
+  awayTeamScore: number;
+}
+
+
   export interface League {
     id: number;
     name: string;

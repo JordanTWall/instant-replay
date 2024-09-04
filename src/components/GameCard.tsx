@@ -7,9 +7,11 @@ interface GameCardProps {
     gameWeek: string;
     gameDate: string;
     homeTeamName: string;
+    homeTeamId: string;
     homeTeamLogo: string;
     awayTeamName: string;
     awayTeamLogo: string;
+    awayTeamId: string;
     homeTeamScore: number;
     awayTeamScore: number;
   };
