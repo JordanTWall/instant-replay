@@ -1,6 +1,7 @@
-import React from 'react';
-import TeamPanel from './TeamPanel'; // Import the new TeamPanel component
-import GameClock from './GameClock'; // Import the GameClock component
+import React, { useState } from 'react';
+import TeamPanel from './TeamPanel';
+import GameClock from './GameClock';
+import { GameEvent } from '../types/GamaData';
 
 interface ScoreboardProps {
   homeTeamName: string;
@@ -14,6 +15,11 @@ interface ScoreboardProps {
   gameDate: string;
   homeTeamColors: { background: string; text: string };
   awayTeamColors: { background: string; text: string };
+  gameEvents: GameEvent[]; // Game events are part of the props
+  isPaused: boolean; // Centralized state
+  togglePause: () => void; // Centralized function
+  time: string; // Current time in MM:SS format
+  quarter: string; // Current quarter
 }
 
 const Scoreboard: React.FC<ScoreboardProps> = ({
@@ -28,10 +34,13 @@ const Scoreboard: React.FC<ScoreboardProps> = ({
   gameDate,
   homeTeamColors,
   awayTeamColors,
+  gameEvents,
+  isPaused,
+  togglePause,
+  time, // Now passed as a prop
+  quarter, // Now passed as a prop
 }) => {
-  const handleQuarterEnd = (newQuarter: number) => {
-    console.log(`Quarter ${newQuarter} started`);
-  };
+  const [currentEvent, setCurrentEvent] = useState<GameEvent | null>(null);
 
   return (
     <div className="flex justify-center items-center w-full h-screen bg-black">
@@ -53,8 +62,14 @@ const Scoreboard: React.FC<ScoreboardProps> = ({
             alt="Football Field"
             className="max-w-full max-h-full object-contain"
           />
-          <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2">
-            <GameClock onQuarterEnd={handleQuarterEnd} />
+          <div
+            className="absolute bottom-5 left-1/2 transform -translate-x-1/2 cursor-pointer"
+          >
+            <GameClock
+              time={time} // Pass the current time from the parent
+              quarter={quarter} // Pass the current quarter from the parent
+              togglePause={togglePause} // Pass the centralized togglePause function
+            />
           </div>
         </div>
 
@@ -68,6 +83,14 @@ const Scoreboard: React.FC<ScoreboardProps> = ({
           teamColors={awayTeamColors}
         />
       </div>
+
+      {/* Display the current event */}
+      {currentEvent && (
+        <div className="absolute top-10 left-1/2 transform -translate-x-1/2 bg-white text-black p-4 rounded-lg shadow-lg">
+          <p>{currentEvent.comment}</p>
+          <p>{currentEvent.score.home} - {currentEvent.score.away}</p>
+        </div>
+      )}
     </div>
   );
 };

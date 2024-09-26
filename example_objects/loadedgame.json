@@ -1,0 +1,1746 @@
+[
+    [
+        [
+            {
+                "quarter": "First",
+                "minute": "15:00"
+            }
+        ],
+        [
+            {
+                "quarter": "First",
+                "minute": "14:56"
+            },
+            {
+                "quarter": "First",
+                "minute": "14:47"
+            },
+            {
+                "quarter": "First",
+                "minute": "14:37"
+            },
+            {
+                "quarter": "First",
+                "minute": "14:25"
+            },
+            {
+                "quarter": "First",
+                "minute": "14:13"
+            },
+            {
+                "quarter": "First",
+                "minute": "14:05"
+            }
+        ],
+        [
+            {
+                "quarter": "First",
+                "minute": "13:56"
+            },
+            {
+                "quarter": "First",
+                "minute": "13:41"
+            },
+            {
+                "quarter": "First",
+                "minute": "13:38"
+            },
+            {
+                "quarter": "First",
+                "minute": "13:24"
+            },
+            {
+                "quarter": "First",
+                "minute": "13:17"
+            },
+            {
+                "quarter": "First",
+                "minute": "13:08"
+            }
+        ],
+        [
+            {
+                "quarter": "First",
+                "minute": "12:58"
+            },
+            {
+                "quarter": "First",
+                "minute": "12:42"
+            },
+            {
+                "quarter": "First",
+                "minute": "12:32"
+            },
+            {
+                "quarter": "First",
+                "minute": "12:29"
+            },
+            {
+                "quarter": "First",
+                "minute": "12:10"
+            },
+            {
+                "quarter": "First",
+                "minute": "12:00"
+            }
+        ],
+        [
+            {
+                "quarter": "First",
+                "minute": "11:59"
+            },
+            {
+                "quarter": "First",
+                "minute": "11:45"
+            },
+            {
+                "quarter": "First",
+                "minute": "11:32"
+            },
+            {
+                "quarter": "First",
+                "minute": "11:27"
+            },
+            {
+                "quarter": "First",
+                "minute": "11:17"
+            },
+            {
+                "quarter": "First",
+                "minute": "11:07"
+            }
+        ],
+        [
+            {
+                "quarter": "First",
+                "minute": "10:56"
+            },
+            {
+                "quarter": "First",
+                "minute": "10:46"
+            },
+            {
+                "quarter": "First",
+                "minute": "10:30"
+            },
+            {
+                "quarter": "First",
+                "minute": "10:24"
+            },
+            {
+                "quarter": "First",
+                "minute": "10:10"
+            },
+            {
+                "quarter": "First",
+                "minute": "10:03"
+            }
+        ],
+        [
+            {
+                "quarter": "First",
+                "minute": "09:51"
+            },
+            {
+                "quarter": "First",
+                "minute": "09:42"
+            },
+            {
+                "quarter": "First",
+                "minute": "09:34"
+            },
+            {
+                "quarter": "First",
+                "minute": "09:20"
+            },
+            {
+                "quarter": "First",
+                "minute": "09:12"
+            },
+            {
+                "quarter": "First",
+                "minute": "09:00"
+            }
+        ],
+        [
+            {
+                "quarter": "First",
+                "minute": "08:52"
+            },
+            {
+                "quarter": "First",
+                "minute": "08:49"
+            },
+            {
+                "quarter": "First",
+                "minute": "08:34"
+            },
+            {
+                "quarter": "First",
+                "minute": "08:22"
+            },
+            {
+                "quarter": "First",
+                "minute": "08:10"
+            },
+            {
+                "quarter": "First",
+                "minute": "8:03",
+                "team": {
+                    "id": 5,
+                    "name": "Baltimore Ravens",
+                    "logo": "https://media.api-sports.io/american-football/teams/5.png"
+                },
+                "player": {
+                    "id": 364,
+                    "name": "Justin Tucker",
+                    "image": "https://media.api-sports.io/american-football/players/364.png"
+                },
+                "type": "FG",
+                "comment": "Justin Tucker 37 Yd Field Goal",
+                "score": {
+                    "home": 3,
+                    "away": 0
+                }
+            },
+            {
+                "quarter": "First",
+                "minute": "08:01"
+            }
+        ],
+        [
+            {
+                "quarter": "First",
+                "minute": "07:56"
+            },
+            {
+                "quarter": "First",
+                "minute": "07:47"
+            },
+            {
+                "quarter": "First",
+                "minute": "07:36"
+            },
+            {
+                "quarter": "First",
+                "minute": "07:23"
+            },
+            {
+                "quarter": "First",
+                "minute": "07:12"
+            },
+            {
+                "quarter": "First",
+                "minute": "07:03"
+            }
+        ],
+        [
+            {
+                "quarter": "First",
+                "minute": "06:52"
+            },
+            {
+                "quarter": "First",
+                "minute": "06:44"
+            },
+            {
+                "quarter": "First",
+                "minute": "06:34"
+            },
+            {
+                "quarter": "First",
+                "minute": "06:24"
+            },
+            {
+                "quarter": "First",
+                "minute": "06:14"
+            },
+            {
+                "quarter": "First",
+                "minute": "06:05"
+            }
+        ],
+        [
+            {
+                "quarter": "First",
+                "minute": "05:57"
+            },
+            {
+                "quarter": "First",
+                "minute": "05:48"
+            },
+            {
+                "quarter": "First",
+                "minute": "05:30"
+            },
+            {
+                "quarter": "First",
+                "minute": "05:23"
+            },
+            {
+                "quarter": "First",
+                "minute": "05:16"
+            },
+            {
+                "quarter": "First",
+                "minute": "05:01"
+            }
+        ],
+        [
+            {
+                "quarter": "First",
+                "minute": "04:56"
+            },
+            {
+                "quarter": "First",
+                "minute": "04:48"
+            },
+            {
+                "quarter": "First",
+                "minute": "04:35"
+            },
+            {
+                "quarter": "First",
+                "minute": "04:28"
+            },
+            {
+                "quarter": "First",
+                "minute": "04:11"
+            },
+            {
+                "quarter": "First",
+                "minute": "04:00"
+            }
+        ],
+        [
+            {
+                "quarter": "First",
+                "minute": "03:52"
+            },
+            {
+                "quarter": "First",
+                "minute": "03:48"
+            },
+            {
+                "quarter": "First",
+                "minute": "03:38"
+            },
+            {
+                "quarter": "First",
+                "minute": "03:26"
+            },
+            {
+                "quarter": "First",
+                "minute": "03:18"
+            },
+            {
+                "quarter": "First",
+                "minute": "03:05"
+            }
+        ],
+        [
+            {
+                "quarter": "First",
+                "minute": "02:59"
+            },
+            {
+                "quarter": "First",
+                "minute": "02:42"
+            },
+            {
+                "quarter": "First",
+                "minute": "02:30"
+            },
+            {
+                "quarter": "First",
+                "minute": "02:25"
+            },
+            {
+                "quarter": "First",
+                "minute": "02:10"
+            },
+            {
+                "quarter": "First",
+                "minute": "02:07"
+            }
+        ],
+        [
+            {
+                "quarter": "First",
+                "minute": "01:52"
+            },
+            {
+                "quarter": "First",
+                "minute": "01:44"
+            },
+            {
+                "quarter": "First",
+                "minute": "01:35"
+            },
+            {
+                "quarter": "First",
+                "minute": "01:20"
+            },
+            {
+                "quarter": "First",
+                "minute": "01:17"
+            },
+            {
+                "quarter": "First",
+                "minute": "01:08"
+            }
+        ],
+        [
+            {
+                "quarter": "First",
+                "minute": "00:50"
+            },
+            {
+                "quarter": "First",
+                "minute": "00:40"
+            },
+            {
+                "quarter": "First",
+                "minute": "00:39"
+            },
+            {
+                "quarter": "First",
+                "minute": "00:20"
+            },
+            {
+                "quarter": "First",
+                "minute": "00:16"
+            },
+            {
+                "quarter": "First",
+                "minute": "00:02"
+            }
+        ]
+    ],
+    [
+        [
+            {
+                "quarter": "Second",
+                "minute": "15:00"
+            }
+        ],
+        [
+            {
+                "quarter": "Second",
+                "minute": "14:50"
+            },
+            {
+                "quarter": "Second",
+                "minute": "14:47"
+            },
+            {
+                "quarter": "Second",
+                "minute": "14:37"
+            },
+            {
+                "quarter": "Second",
+                "minute": "14:20"
+            },
+            {
+                "quarter": "Second",
+                "minute": "14:10"
+            },
+            {
+                "quarter": "Second",
+                "minute": "14:02"
+            }
+        ],
+        [
+            {
+                "quarter": "Second",
+                "minute": "13:51"
+            },
+            {
+                "quarter": "Second",
+                "minute": "13:42"
+            },
+            {
+                "quarter": "Second",
+                "minute": "13:37"
+            },
+            {
+                "quarter": "Second",
+                "minute": "13:29"
+            },
+            {
+                "quarter": "Second",
+                "minute": "13:26",
+                "team": {
+                    "id": 5,
+                    "name": "Baltimore Ravens",
+                    "logo": "https://media.api-sports.io/american-football/teams/5.png"
+                },
+                "player": {
+                    "id": 309,
+                    "name": "Mark Andrews",
+                    "image": "https://media.api-sports.io/american-football/players/309.png"
+                },
+                "type": "TD",
+                "comment": "Mark Andrews 11 Yd pass from Lamar Jackson (Justin Tucker Kick)",
+                "score": {
+                    "home": 10,
+                    "away": 0
+                }
+            },
+            {
+                "quarter": "Second",
+                "minute": "13:17"
+            },
+            {
+                "quarter": "Second",
+                "minute": "13:01"
+            }
+        ],
+        [
+            {
+                "quarter": "Second",
+                "minute": "12:52"
+            },
+            {
+                "quarter": "Second",
+                "minute": "12:45"
+            },
+            {
+                "quarter": "Second",
+                "minute": "12:30"
+            },
+            {
+                "quarter": "Second",
+                "minute": "12:28"
+            },
+            {
+                "quarter": "Second",
+                "minute": "12:10"
+            },
+            {
+                "quarter": "Second",
+                "minute": "12:02"
+            }
+        ],
+        [
+            {
+                "quarter": "Second",
+                "minute": "11:50"
+            },
+            {
+                "quarter": "Second",
+                "minute": "11:40"
+            },
+            {
+                "quarter": "Second",
+                "minute": "11:37"
+            },
+            {
+                "quarter": "Second",
+                "minute": "11:21"
+            },
+            {
+                "quarter": "Second",
+                "minute": "11:14"
+            },
+            {
+                "quarter": "Second",
+                "minute": "11:01"
+            }
+        ],
+        [
+            {
+                "quarter": "Second",
+                "minute": "10:51"
+            },
+            {
+                "quarter": "Second",
+                "minute": "10:49"
+            },
+            {
+                "quarter": "Second",
+                "minute": "10:35"
+            },
+            {
+                "quarter": "Second",
+                "minute": "10:26"
+            },
+            {
+                "quarter": "Second",
+                "minute": "10:13"
+            },
+            {
+                "quarter": "Second",
+                "minute": "10:08"
+            }
+        ],
+        [
+            {
+                "quarter": "Second",
+                "minute": "09:56"
+            },
+            {
+                "quarter": "Second",
+                "minute": "09:42"
+            },
+            {
+                "quarter": "Second",
+                "minute": "09:37"
+            },
+            {
+                "quarter": "Second",
+                "minute": "09:20"
+            },
+            {
+                "quarter": "Second",
+                "minute": "09:16"
+            },
+            {
+                "quarter": "Second",
+                "minute": "09:05"
+            }
+        ],
+        [
+            {
+                "quarter": "Second",
+                "minute": "08:51"
+            },
+            {
+                "quarter": "Second",
+                "minute": "08:47"
+            },
+            {
+                "quarter": "Second",
+                "minute": "08:33"
+            },
+            {
+                "quarter": "Second",
+                "minute": "08:20"
+            },
+            {
+                "quarter": "Second",
+                "minute": "08:11"
+            },
+            {
+                "quarter": "Second",
+                "minute": "08:06"
+            }
+        ],
+        [
+            {
+                "quarter": "Second",
+                "minute": "07:56"
+            },
+            {
+                "quarter": "Second",
+                "minute": "07:43"
+            },
+            {
+                "quarter": "Second",
+                "minute": "07:35"
+            },
+            {
+                "quarter": "Second",
+                "minute": "07:29"
+            },
+            {
+                "quarter": "Second",
+                "minute": "07:12"
+            },
+            {
+                "quarter": "Second",
+                "minute": "07:04"
+            }
+        ],
+        [
+            {
+                "quarter": "Second",
+                "minute": "06:58"
+            },
+            {
+                "quarter": "Second",
+                "minute": "06:44"
+            },
+            {
+                "quarter": "Second",
+                "minute": "06:37"
+            },
+            {
+                "quarter": "Second",
+                "minute": "06:29"
+            },
+            {
+                "quarter": "Second",
+                "minute": "06:14"
+            },
+            {
+                "quarter": "Second",
+                "minute": "06:07"
+            }
+        ],
+        [
+            {
+                "quarter": "Second",
+                "minute": "05:57"
+            },
+            {
+                "quarter": "Second",
+                "minute": "05:40"
+            },
+            {
+                "quarter": "Second",
+                "minute": "05:37"
+            },
+            {
+                "quarter": "Second",
+                "minute": "05:27"
+            },
+            {
+                "quarter": "Second",
+                "minute": "05:11"
+            },
+            {
+                "quarter": "Second",
+                "minute": "05:02"
+            }
+        ],
+        [
+            {
+                "quarter": "Second",
+                "minute": "4:54",
+                "team": {
+                    "id": 10,
+                    "name": "Cincinnati Bengals",
+                    "logo": "https://media.api-sports.io/american-football/teams/10.png"
+                },
+                "player": {
+                    "id": 698,
+                    "name": "Hayden Hurst",
+                    "image": "https://media.api-sports.io/american-football/players/698.png"
+                },
+                "type": "TD",
+                "comment": "Hayden Hurst 19 Yd pass from Joe Burrow (Evan McPherson Kick)",
+                "score": {
+                    "home": 10,
+                    "away": 7
+                }
+            },
+            {
+                "quarter": "Second",
+                "minute": "04:50"
+            },
+            {
+                "quarter": "Second",
+                "minute": "04:42"
+            },
+            {
+                "quarter": "Second",
+                "minute": "04:38"
+            },
+            {
+                "quarter": "Second",
+                "minute": "04:28"
+            },
+            {
+                "quarter": "Second",
+                "minute": "04:15"
+            },
+            {
+                "quarter": "Second",
+                "minute": "04:05"
+            }
+        ],
+        [
+            {
+                "quarter": "Second",
+                "minute": "03:52"
+            },
+            {
+                "quarter": "Second",
+                "minute": "03:41"
+            },
+            {
+                "quarter": "Second",
+                "minute": "03:34"
+            },
+            {
+                "quarter": "Second",
+                "minute": "03:25"
+            },
+            {
+                "quarter": "Second",
+                "minute": "03:10"
+            },
+            {
+                "quarter": "Second",
+                "minute": "03:01"
+            }
+        ],
+        [
+            {
+                "quarter": "Second",
+                "minute": "02:51"
+            },
+            {
+                "quarter": "Second",
+                "minute": "02:47"
+            },
+            {
+                "quarter": "Second",
+                "minute": "02:38"
+            },
+            {
+                "quarter": "Second",
+                "minute": "02:21"
+            },
+            {
+                "quarter": "Second",
+                "minute": "02:18"
+            },
+            {
+                "quarter": "Second",
+                "minute": "02:06"
+            }
+        ],
+        [
+            {
+                "quarter": "Second",
+                "minute": "01:57"
+            },
+            {
+                "quarter": "Second",
+                "minute": "01:44"
+            },
+            {
+                "quarter": "Second",
+                "minute": "01:38"
+            },
+            {
+                "quarter": "Second",
+                "minute": "01:28"
+            },
+            {
+                "quarter": "Second",
+                "minute": "01:14"
+            },
+            {
+                "quarter": "Second",
+                "minute": "01:08"
+            }
+        ],
+        [
+            {
+                "quarter": "Second",
+                "minute": "00:53"
+            },
+            {
+                "quarter": "Second",
+                "minute": "00:43"
+            },
+            {
+                "quarter": "Second",
+                "minute": "00:37"
+            },
+            {
+                "quarter": "Second",
+                "minute": "00:27"
+            },
+            {
+                "quarter": "Second",
+                "minute": "00:18"
+            },
+            {
+                "quarter": "Second",
+                "minute": "0:04",
+                "team": {
+                    "id": 10,
+                    "name": "Cincinnati Bengals",
+                    "logo": "https://media.api-sports.io/american-football/teams/10.png"
+                },
+                "player": {
+                    "id": 747,
+                    "name": "Evan McPherson",
+                    "image": "https://media.api-sports.io/american-football/players/747.png"
+                },
+                "type": "FG",
+                "comment": "Evan McPherson 40 Yd Field Goal",
+                "score": {
+                    "home": 10,
+                    "away": 10
+                }
+            },
+            {
+                "quarter": "Second",
+                "minute": "00:00"
+            }
+        ]
+    ],
+    [
+        [
+            {
+                "quarter": "Third",
+                "minute": "15:00"
+            }
+        ],
+        [
+            {
+                "quarter": "Third",
+                "minute": "14:51"
+            },
+            {
+                "quarter": "Third",
+                "minute": "14:44"
+            },
+            {
+                "quarter": "Third",
+                "minute": "14:31"
+            },
+            {
+                "quarter": "Third",
+                "minute": "14:22"
+            },
+            {
+                "quarter": "Third",
+                "minute": "14:15"
+            },
+            {
+                "quarter": "Third",
+                "minute": "14:02"
+            }
+        ],
+        [
+            {
+                "quarter": "Third",
+                "minute": "13:51"
+            },
+            {
+                "quarter": "Third",
+                "minute": "13:45"
+            },
+            {
+                "quarter": "Third",
+                "minute": "13:30"
+            },
+            {
+                "quarter": "Third",
+                "minute": "13:27"
+            },
+            {
+                "quarter": "Third",
+                "minute": "13:10"
+            },
+            {
+                "quarter": "Third",
+                "minute": "13:06"
+            }
+        ],
+        [
+            {
+                "quarter": "Third",
+                "minute": "12:50"
+            },
+            {
+                "quarter": "Third",
+                "minute": "12:42"
+            },
+            {
+                "quarter": "Third",
+                "minute": "12:37"
+            },
+            {
+                "quarter": "Third",
+                "minute": "12:27"
+            },
+            {
+                "quarter": "Third",
+                "minute": "12:19"
+            },
+            {
+                "quarter": "Third",
+                "minute": "12:00"
+            }
+        ],
+        [
+            {
+                "quarter": "Third",
+                "minute": "11:53"
+            },
+            {
+                "quarter": "Third",
+                "minute": "11:45"
+            },
+            {
+                "quarter": "Third",
+                "minute": "11:35"
+            },
+            {
+                "quarter": "Third",
+                "minute": "11:23"
+            },
+            {
+                "quarter": "Third",
+                "minute": "11:10"
+            },
+            {
+                "quarter": "Third",
+                "minute": "11:03"
+            }
+        ],
+        [
+            {
+                "quarter": "Third",
+                "minute": "10:59"
+            },
+            {
+                "quarter": "Third",
+                "minute": "10:49",
+                "team": {
+                    "id": 5,
+                    "name": "Baltimore Ravens",
+                    "logo": "https://media.api-sports.io/american-football/teams/5.png"
+                },
+                "player": {
+                    "id": 364,
+                    "name": "Justin Tucker",
+                    "image": "https://media.api-sports.io/american-football/players/364.png"
+                },
+                "type": "FG",
+                "comment": "Justin Tucker 58 Yd Field Goal",
+                "score": {
+                    "home": 13,
+                    "away": 10
+                }
+            },
+            {
+                "quarter": "Third",
+                "minute": "10:31"
+            },
+            {
+                "quarter": "Third",
+                "minute": "10:25"
+            },
+            {
+                "quarter": "Third",
+                "minute": "10:16"
+            },
+            {
+                "quarter": "Third",
+                "minute": "10:04"
+            }
+        ],
+        [
+            {
+                "quarter": "Third",
+                "minute": "09:57"
+            },
+            {
+                "quarter": "Third",
+                "minute": "09:42"
+            },
+            {
+                "quarter": "Third",
+                "minute": "09:39"
+            },
+            {
+                "quarter": "Third",
+                "minute": "09:26"
+            },
+            {
+                "quarter": "Third",
+                "minute": "09:11"
+            },
+            {
+                "quarter": "Third",
+                "minute": "09:01"
+            }
+        ],
+        [
+            {
+                "quarter": "Third",
+                "minute": "08:52"
+            },
+            {
+                "quarter": "Third",
+                "minute": "08:49"
+            },
+            {
+                "quarter": "Third",
+                "minute": "08:39"
+            },
+            {
+                "quarter": "Third",
+                "minute": "08:27"
+            },
+            {
+                "quarter": "Third",
+                "minute": "08:10"
+            },
+            {
+                "quarter": "Third",
+                "minute": "08:05"
+            }
+        ],
+        [
+            {
+                "quarter": "Third",
+                "minute": "07:57"
+            },
+            {
+                "quarter": "Third",
+                "minute": "07:45"
+            },
+            {
+                "quarter": "Third",
+                "minute": "07:38"
+            },
+            {
+                "quarter": "Third",
+                "minute": "07:24"
+            },
+            {
+                "quarter": "Third",
+                "minute": "07:13"
+            },
+            {
+                "quarter": "Third",
+                "minute": "07:04"
+            }
+        ],
+        [
+            {
+                "quarter": "Third",
+                "minute": "06:53"
+            },
+            {
+                "quarter": "Third",
+                "minute": "06:41"
+            },
+            {
+                "quarter": "Third",
+                "minute": "06:39"
+            },
+            {
+                "quarter": "Third",
+                "minute": "06:27"
+            },
+            {
+                "quarter": "Third",
+                "minute": "06:13"
+            },
+            {
+                "quarter": "Third",
+                "minute": "06:02"
+            }
+        ],
+        [
+            {
+                "quarter": "Third",
+                "minute": "05:55"
+            },
+            {
+                "quarter": "Third",
+                "minute": "05:44"
+            },
+            {
+                "quarter": "Third",
+                "minute": "05:31"
+            },
+            {
+                "quarter": "Third",
+                "minute": "05:20"
+            },
+            {
+                "quarter": "Third",
+                "minute": "05:13"
+            },
+            {
+                "quarter": "Third",
+                "minute": "05:09"
+            }
+        ],
+        [
+            {
+                "quarter": "Third",
+                "minute": "04:55"
+            },
+            {
+                "quarter": "Third",
+                "minute": "04:46"
+            },
+            {
+                "quarter": "Third",
+                "minute": "04:31"
+            },
+            {
+                "quarter": "Third",
+                "minute": "04:21"
+            },
+            {
+                "quarter": "Third",
+                "minute": "04:16"
+            },
+            {
+                "quarter": "Third",
+                "minute": "04:07"
+            }
+        ],
+        [
+            {
+                "quarter": "Third",
+                "minute": "03:54"
+            },
+            {
+                "quarter": "Third",
+                "minute": "03:48"
+            },
+            {
+                "quarter": "Third",
+                "minute": "03:35"
+            },
+            {
+                "quarter": "Third",
+                "minute": "03:29"
+            },
+            {
+                "quarter": "Third",
+                "minute": "03:12"
+            },
+            {
+                "quarter": "Third",
+                "minute": "03:00"
+            }
+        ],
+        [
+            {
+                "quarter": "Third",
+                "minute": "02:53"
+            },
+            {
+                "quarter": "Third",
+                "minute": "02:46"
+            },
+            {
+                "quarter": "Third",
+                "minute": "02:37"
+            },
+            {
+                "quarter": "Third",
+                "minute": "02:23"
+            },
+            {
+                "quarter": "Third",
+                "minute": "02:10"
+            },
+            {
+                "quarter": "Third",
+                "minute": "02:02"
+            }
+        ],
+        [
+            {
+                "quarter": "Third",
+                "minute": "01:50"
+            },
+            {
+                "quarter": "Third",
+                "minute": "01:45"
+            },
+            {
+                "quarter": "Third",
+                "minute": "01:32"
+            },
+            {
+                "quarter": "Third",
+                "minute": "01:27"
+            },
+            {
+                "quarter": "Third",
+                "minute": "01:14"
+            },
+            {
+                "quarter": "Third",
+                "minute": "01:08"
+            }
+        ],
+        [
+            {
+                "quarter": "Third",
+                "minute": "00:53"
+            },
+            {
+                "quarter": "Third",
+                "minute": "00:44"
+            },
+            {
+                "quarter": "Third",
+                "minute": "00:33"
+            },
+            {
+                "quarter": "Third",
+                "minute": "00:20"
+            },
+            {
+                "quarter": "Third",
+                "minute": "00:10"
+            },
+            {
+                "quarter": "Third",
+                "minute": "00:02"
+            }
+        ]
+    ],
+    [
+        [
+            {
+                "quarter": "Fourth",
+                "minute": "15:00"
+            }
+        ],
+        [
+            {
+                "quarter": "Fourth",
+                "minute": "14:57"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "14:43"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "14:31"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "14:29"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "14:18"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "14:06"
+            }
+        ],
+        [
+            {
+                "quarter": "Fourth",
+                "minute": "13:57"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "13:45"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "13:34"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "13:21"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "13:19"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "13:03"
+            }
+        ],
+        [
+            {
+                "quarter": "Fourth",
+                "minute": "12:58"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "12:48"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "12:37"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "12:29"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "12:16"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "12:09"
+            }
+        ],
+        [
+            {
+                "quarter": "Fourth",
+                "minute": "11:53"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "11:44"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "11:39"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "11:27"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "11:14"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "11:09"
+            }
+        ],
+        [
+            {
+                "quarter": "Fourth",
+                "minute": "10:56"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "10:42"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "10:33"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "10:21"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "10:10"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "10:02"
+            }
+        ],
+        [
+            {
+                "quarter": "Fourth",
+                "minute": "09:59"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "09:49"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "9:42",
+                "team": {
+                    "id": 5,
+                    "name": "Baltimore Ravens",
+                    "logo": "https://media.api-sports.io/american-football/teams/5.png"
+                },
+                "player": {
+                    "id": 364,
+                    "name": "Justin Tucker",
+                    "image": "https://media.api-sports.io/american-football/players/364.png"
+                },
+                "type": "FG",
+                "comment": "Justin Tucker 25 Yd Field Goal",
+                "score": {
+                    "home": 16,
+                    "away": 10
+                }
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "09:31"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "09:29"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "09:10"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "09:06"
+            }
+        ],
+        [
+            {
+                "quarter": "Fourth",
+                "minute": "08:53"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "08:41"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "08:35"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "08:21"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "08:15"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "08:06"
+            }
+        ],
+        [
+            {
+                "quarter": "Fourth",
+                "minute": "07:51"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "07:41"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "07:37"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "07:23"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "07:16"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "07:04"
+            }
+        ],
+        [
+            {
+                "quarter": "Fourth",
+                "minute": "06:53"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "06:43"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "06:34"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "06:26"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "06:19"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "06:09"
+            }
+        ],
+        [
+            {
+                "quarter": "Fourth",
+                "minute": "05:54"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "05:46"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "05:37"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "05:27"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "05:13"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "05:02"
+            }
+        ],
+        [
+            {
+                "quarter": "Fourth",
+                "minute": "04:59"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "04:46"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "04:35"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "04:28"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "04:17"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "04:08"
+            }
+        ],
+        [
+            {
+                "quarter": "Fourth",
+                "minute": "03:56"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "03:41"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "03:34"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "03:23"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "03:13"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "03:08"
+            }
+        ],
+        [
+            {
+                "quarter": "Fourth",
+                "minute": "02:51"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "02:46"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "02:39"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "02:25"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "02:11"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "02:05"
+            }
+        ],
+        [
+            {
+                "quarter": "Fourth",
+                "minute": "1:58",
+                "team": {
+                    "id": 10,
+                    "name": "Cincinnati Bengals",
+                    "logo": "https://media.api-sports.io/american-football/teams/10.png"
+                },
+                "player": {
+                    "id": 683,
+                    "name": "Joe Burrow",
+                    "image": "https://media.api-sports.io/american-football/players/683.png"
+                },
+                "type": "TD",
+                "comment": "Joe Burrow 1 Yd Run (Evan McPherson Kick)",
+                "score": {
+                    "home": 16,
+                    "away": 17
+                }
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "01:49"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "01:37"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "01:20"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "01:18"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "01:00"
+            }
+        ],
+        [
+            {
+                "quarter": "Fourth",
+                "minute": "00:58"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "00:46"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "00:38"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "00:24"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "00:11"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "00:09"
+            },
+            {
+                "quarter": "Fourth",
+                "minute": "0:00",
+                "team": {
+                    "id": 5,
+                    "name": "Baltimore Ravens",
+                    "logo": "https://media.api-sports.io/american-football/teams/5.png"
+                },
+                "player": {
+                    "id": 364,
+                    "name": "Justin Tucker",
+                    "image": "https://media.api-sports.io/american-football/players/364.png"
+                },
+                "type": "FG",
+                "comment": "Justin Tucker 43 Yd Field Goal",
+                "score": {
+                    "home": 19,
+                    "away": 17
+                }
+            }
+        ]
+    ]
+]

@@ -1,6 +1,6 @@
 // src/services/fetchAPIData.ts
 import axios from 'axios';
-import { GameObject } from '../types/GamaData'; // Import GameObject type
+import { GameObject, GameEvent, GameEventResponse } from '../types/GamaData'; // Import GameObject type
 
 export const fetchGames = async (teamName: string, season: string): Promise<GameObject[]> => {
   try {
@@ -17,16 +17,16 @@ export const fetchGames = async (teamName: string, season: string): Promise<Game
   }
 };
 
-export const fetchGameEvents = async (gameId: number): Promise<any> => {
+export const fetchGameEvents = async (gameId: number): Promise<GameEvent[]> => {
   try {
-    console.log(`Attempting to fetch events for gameId: ${gameId}`);
-    const response = await axios.get(`http://localhost:8080/instantreplay/api/events`, {
-      params: { gameId: gameId },
+    const response = await axios.get<GameEventResponse>(`http://localhost:8080/instantreplay/api/events`, {
+      params: { gameId },
     });
-    console.log('Response data:', response.data);
-    return response.data;
+    console.log(response.data.response)
+    return response.data.response;  // Extract and return the actual events array
   } catch (err) {
     console.error('Failed to fetch game event data:', err);
     throw err;
   }
 };
+

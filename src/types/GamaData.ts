@@ -20,6 +20,42 @@ export interface Game {
     };
   }
   
+  export interface GameEvent {
+    quarter: string;
+    minute: string;
+    team: {
+      id: number;
+      name: string;
+      logo: string;
+    };
+    player: {
+      id: number;
+      name: string;
+      image: string;
+    };
+    type: string;
+    comment: string;
+    score: {
+      home: number;
+      away: number;
+    };
+  }
+  
+  export interface DummyEvent {
+    quarter: string;
+    minute: string;
+  }
+  
+  export interface GameEventResponse {
+    get: string;
+    parameters: {
+      id: string;
+    };
+    errors: any[];
+    results: number;
+    response: GameEvent[];  // response array contains GameEvent objects
+  }
+  
   // src/types/GameObject.ts
 export interface GameObject {
   gameId: number;
@@ -95,3 +131,11 @@ export interface GameObject {
     response: GameResponse[];
   }
   
+  export interface DummyEvent {
+    quarter: string;
+    minute: string; 
+  }
+  
+  export type MinuteEvents = (GameEvent | DummyEvent)[];
+  export type Quarter = MinuteEvents[];
+  export type LoadedGame = Quarter[];

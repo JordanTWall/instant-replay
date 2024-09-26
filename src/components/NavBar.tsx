@@ -17,7 +17,7 @@ const NavBar: React.FC<NavBarProps> = ({ resetAppState }) => {
   return (
     <nav className="bg-gray-800 p-4 flex justify-between items-center">
       <div className="flex items-center">
-        <Link to="/" onClick={resetAppState} className="text-red-700 text-2xl bg-white rounded-lg px-8 py-2 my-2" style={{ fontFamily: 'Supercharge Halftone' }}>
+        <Link to="/" onClick={resetAppState} className="bg-red-700 text-2xl text-white rounded-full px-8 pb-2 pt-4 my-2" style={{ fontFamily: 'Supercharge Halftone' }}>
           INSTANT REPLAY
         </Link>
       </div>

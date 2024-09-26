@@ -56,6 +56,7 @@ const App: React.FC = () => {
         try {
           const events = await fetchGameEvents(selectedGame.gameId);
           setGameEvents(events);
+          console.log(events)
           setCurrentScreen('instantReplay'); // Navigate to the InstantReplay screen
         } catch (err) {
           console.error('Failed to fetch game events:', err);
@@ -115,14 +116,12 @@ const App: React.FC = () => {
         />
       )}
         {currentScreen === 'instantReplay' && selectedGame && gameEvents && (
-          <InstantReplayScreen
-            gameEvents={gameEvents}
-            onBackClick={handleBackClick}
-            game={selectedGame}
-            showScores={true}
-            selectedTeam={selectedTeam.name}
-          />
-        )}
+  <InstantReplayScreen
+    gameEvents={gameEvents}
+    
+    game={selectedGame}
+  />
+)}
         {currentScreen !== 'description' && <BackButton onClick={handleBackClick} />}
       </div>
     </Router>
