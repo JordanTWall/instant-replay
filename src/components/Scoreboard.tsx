@@ -40,7 +40,7 @@ const Scoreboard: React.FC<ScoreboardProps> = ({
   time, // Now passed as a prop
   quarter, // Now passed as a prop
 }) => {
-  const [currentEvent, setCurrentEvent] = useState<GameEvent | null>(null);
+
 
   return (
     <div className="flex justify-center items-center w-full h-screen bg-black">
@@ -49,7 +49,7 @@ const Scoreboard: React.FC<ScoreboardProps> = ({
         <TeamPanel
           teamName={homeTeamName}
           teamLogo={homeTeamLogo}
-          teamScore={homeTeamScore}
+          teamScore={homeTeamScore} // Updated score
           gameStage={gameStage}
           gameWeek={gameWeek}
           teamColors={homeTeamColors}
@@ -62,9 +62,7 @@ const Scoreboard: React.FC<ScoreboardProps> = ({
             alt="Football Field"
             className="max-w-full max-h-full object-contain"
           />
-          <div
-            className="absolute bottom-5 left-1/2 transform -translate-x-1/2 cursor-pointer"
-          >
+          <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 cursor-pointer">
             <GameClock
               time={time} // Pass the current time from the parent
               quarter={quarter} // Pass the current quarter from the parent
@@ -77,20 +75,12 @@ const Scoreboard: React.FC<ScoreboardProps> = ({
         <TeamPanel
           teamName={awayTeamName}
           teamLogo={awayTeamLogo}
-          teamScore={awayTeamScore}
+          teamScore={awayTeamScore} // Updated score
           gameStage={gameStage}
           gameWeek={gameWeek}
           teamColors={awayTeamColors}
         />
       </div>
-
-      {/* Display the current event */}
-      {currentEvent && (
-        <div className="absolute top-10 left-1/2 transform -translate-x-1/2 bg-white text-black p-4 rounded-lg shadow-lg">
-          <p>{currentEvent.comment}</p>
-          <p>{currentEvent.score.home} - {currentEvent.score.away}</p>
-        </div>
-      )}
     </div>
   );
 };

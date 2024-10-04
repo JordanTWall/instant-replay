@@ -1,14 +1,14 @@
-import { GameEvent, LoadedGame, DummyEvent } from '../types/GamaData';
+import { GameEvent, DummyEvent, LoadedGame, Quarter, MinuteEvents } from '../types/GamaData';
 
-export function gameConstructor(gameEvents: GameEvent[], gameStage: string): LoadedGame {
+export function gameConstructor(gameEvents: GameEvent[], gameStage: string): (GameEvent | DummyEvent)[] {
   // Determine if this is the postseason (15 minutes for overtime) or regular season (10 minutes)
   const isPostSeason = gameStage === 'Post Season';
   const overtimeDuration = isPostSeason ? 15 : 10; // Overtime is 15 minutes in postseason, 10 in regular season
 
   // Check if there's any overtime event in the gameEvents
   const hasOvertime = gameEvents.some((event) => event.quarter === 'Overtime');
-  
-  // Create array for 4 quarters or 5 if overtime is present
+
+  // Explicitly define the type for loadedGame as LoadedGame (2D array of MinuteEvents)
   const loadedGame: LoadedGame = hasOvertime ? [[], [], [], [], []] : [[], [], [], []];
 
   // Insert game events into the correct quarter/minute
@@ -33,7 +33,6 @@ export function gameConstructor(gameEvents: GameEvent[], gameStage: string): Loa
 
   // Insert dummy events, including "15:00" and "0:00" for each quarter
   loadedGame.forEach((quarter, quarterIndex) => {
-    // Add "15:00" or "10:00/15:00" at the start of each quarter
     const startMinute = quarterIndex === 4 ? `${overtimeDuration}:00` : '15:00'; // Overtime is 15 or 10 minutes
     const endMinute = '0:00'; // Every quarter ends at 0:00
 
@@ -84,7 +83,10 @@ export function gameConstructor(gameEvents: GameEvent[], gameStage: string): Loa
     quarter.reverse();
   });
 
-  return loadedGame;
+  // Flatten the loadedGame array
+  const flattenedGame: (GameEvent | DummyEvent)[] = loadedGame.flatMap((quarter) => quarter.flat());
+
+  return flattenedGame;
 }
 
 // Helper function to generate dummy seconds
