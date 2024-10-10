@@ -36,11 +36,11 @@ export const teamColors: ColorKey = {
       "text": "#000000"
     },
     "9": {
-      "background": "#fb4f14",
-      "text": "#ff3c00"
+      "background": "#ff3c00",
+      "text": "#342624"
     },
     "10": {
-      "background": "#D50A0A",
+      "background": "#fb4f14",
       "text": "#000000"
     },
     "11": {

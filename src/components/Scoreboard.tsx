@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import TeamPanel from './TeamPanel';
 import GameClock from './GameClock';
 import { GameEvent } from '../types/GamaData';
+import HomeFieldBackground from './AwayFieldBackground';
 
 interface ScoreboardProps {
   homeTeamName: string;
