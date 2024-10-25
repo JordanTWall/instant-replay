@@ -16,8 +16,8 @@ export const teamColors: ColorKey = {
       "text": "#B0B7BC"
     },
     "4": {
-      "background": "#0B2265",
-      "text": "#a71930"
+      "background": "#a71930",
+      "text": "#0B2265"
     },
     "5": {
       "background": "#000000",

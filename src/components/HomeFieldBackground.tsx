@@ -34,15 +34,15 @@ const HomeFieldBackground: React.FC<HomeFieldBackgroundProps> = ({ fill }) => (
     </g>
     <g filter="url(#filter2_dd_16_3)">
     <rect x="775" y="220" width="6" height="214" fill="#FFE606"/>
-    <rect x="775.25" y="220.25" width="5.5" height="213.5" stroke="black" stroke-width="0.5"/>
+    <rect x="775.25" y="220.25" width="5.5" height="213.5" stroke="black" strokeWidth="0.5"/>
     </g>
     <g filter="url(#filter3_dd_16_3)">
     <rect x="731" y="-47" width="6" height="214" fill="#FFE606"/>
-    <rect x="731.25" y="-46.75" width="5.5" height="213.5" stroke="black" stroke-width="0.5"/>
+    <rect x="731.25" y="-46.75" width="5.5" height="213.5" stroke="black" strokeWidth="0.5"/>
     </g>
     <g filter="url(#filter4_dd_16_3)">
     <rect x="731" y="165.74" width="6" height="143.099" transform="rotate(-38.5577 731 165.74)" fill="#FFE606"/>
-    <rect x="731.351" y="165.779" width="5.5" height="142.599" transform="rotate(-38.5577 731.351 165.779)" stroke="black" stroke-width="0.5"/>
+    <rect x="731.351" y="165.779" width="5.5" height="142.599" transform="rotate(-38.5577 731.351 165.779)" stroke="black" strokeWidth="0.5"/>
     </g> 
     <rect x="555" y="584" width="6" height="16" fill="white"/>
     <rect x="399" y="584" width="6" height="16" fill="white"/>
@@ -68,8 +68,8 @@ const HomeFieldBackground: React.FC<HomeFieldBackgroundProps> = ({ fill }) => (
     <rect x="4.5" y="0.5" width="799" height="599" stroke="black"/>
     </g>
     <defs>
-    <filter id="filter0_d_16_3" x="0" y="0" width="808" height="608" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+    <filter id="filter0_d_16_3" x="0" y="0" width="808" height="608" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+    <feFlood floodOpacity="0" result="BackgroundImageFix"/>
     <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
     <feOffset dy="4"/>
     <feGaussianBlur stdDeviation="2"/>
@@ -78,8 +78,8 @@ const HomeFieldBackground: React.FC<HomeFieldBackgroundProps> = ({ fill }) => (
     <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_16_3"/>
     <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_16_3" result="shape"/>
     </filter>
-    <filter id="filter1_d_16_3" x="119" y="328" width="488" height="281" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+    <filter id="filter1_d_16_3" x="119" y="328" width="488" height="281" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+    <feFlood floodOpacity="0" result="BackgroundImageFix"/>
     <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
     <feOffset dy="4"/>
     <feGaussianBlur stdDeviation="2"/>
@@ -88,8 +88,8 @@ const HomeFieldBackground: React.FC<HomeFieldBackgroundProps> = ({ fill }) => (
     <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_16_3"/>
     <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_16_3" result="shape"/>
     </filter>
-    <filter id="filter2_dd_16_3" x="771" y="220" width="14" height="222" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+    <filter id="filter2_dd_16_3" x="771" y="220" width="14" height="222" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+    <feFlood floodOpacity="0" result="BackgroundImageFix"/>
     <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
     <feOffset dy="4"/>
     <feGaussianBlur stdDeviation="2"/>
@@ -104,8 +104,8 @@ const HomeFieldBackground: React.FC<HomeFieldBackgroundProps> = ({ fill }) => (
     <feBlend mode="normal" in2="effect1_dropShadow_16_3" result="effect2_dropShadow_16_3"/>
     <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_16_3" result="shape"/>
     </filter>
-    <filter id="filter3_dd_16_3" x="727" y="-47" width="14" height="222" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+    <filter id="filter3_dd_16_3" x="727" y="-47" width="14" height="222" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+    <feFlood floodOpacity="0" result="BackgroundImageFix"/>
     <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
     <feOffset dy="4"/>
     <feGaussianBlur stdDeviation="2"/>
@@ -120,8 +120,8 @@ const HomeFieldBackground: React.FC<HomeFieldBackgroundProps> = ({ fill }) => (
     <feBlend mode="normal" in2="effect1_dropShadow_16_3" result="effect2_dropShadow_16_3"/>
     <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_16_3" result="shape"/>
     </filter>
-    <filter id="filter4_dd_16_3" x="727" y="162" width="101.886" height="123.64" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+    <filter id="filter4_dd_16_3" x="727" y="162" width="101.886" height="123.64" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+    <feFlood floodOpacity="0" result="BackgroundImageFix"/>
     <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
     <feOffset dy="4"/>
     <feGaussianBlur stdDeviation="2"/>
@@ -137,9 +137,9 @@ const HomeFieldBackground: React.FC<HomeFieldBackgroundProps> = ({ fill }) => (
     <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_16_3" result="shape"/>
     </filter>
     <linearGradient id="paint0_linear_16_3" x1="404" y1="0" x2="404" y2="600" gradientUnits="userSpaceOnUse">
-    <stop stop-color="#6BF1FA"/>
-    <stop offset="0.208025" stop-color="#B5F8FC"/>
-    <stop offset="1" stop-color="white"/>
+    <stop stopColor="#6BF1FA"/>
+    <stop offset="0.208025" stopColor="#B5F8FC"/>
+    <stop offset="1" stopColor="white"/>
     </linearGradient>
     <clipPath id="clip0_16_3">
     <rect x="4" width="800" height="600" fill="white"/>

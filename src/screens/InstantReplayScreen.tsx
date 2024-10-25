@@ -1,10 +1,14 @@
+// src/screens/InstantReplayScreen.tsx
 import React, { useState, useEffect, useRef } from 'react';
 import { GameObject, GameEvent, DummyEvent } from '../types/GamaData';
 import { gameConstructor } from '../services/gameConstructor';
 import { teamColors } from '../styles/teamColors';
-import ScoreBug from '../components/ScoreBug'; 
-import HomeFieldBackground from '../components/HomeFieldBackground'; 
-import AwayFieldBackground from '../components/AwayFieldBackground'; 
+import ScoreBug from '../components/ScoreBug';
+import HomeFieldBackground from '../components/HomeFieldBackground';
+import AwayFieldBackground from '../components/AwayFieldBackground';
+import AnimationContainer from '../components/AnimationContainer';
+import TestButton from '../components/TestButton';
+import BackButton from '../components/BackButton';
 
 interface InstantReplayScreenProps {
   gameEvents: GameEvent[];
@@ -13,10 +17,9 @@ interface InstantReplayScreenProps {
 
 // Utility function to check if the event is a GameEvent
 function isGameEvent(event: GameEvent | DummyEvent): event is GameEvent {
-  return 'comment' in event;
+  return 'comment' in event && 'team' in event && 'player' in event;
 }
 
-// Function to convert quarters to ordinal numbers
 const convertQuarterToOrdinal = (quarter: string): string => {
   switch (quarter.toLowerCase()) {
     case 'first':
@@ -44,7 +47,7 @@ const InstantReplayScreen: React.FC<InstantReplayScreenProps> = ({ gameEvents, g
   const [fieldBackground, setFieldBackground] = useState<JSX.Element>(
     <HomeFieldBackground fill={teamColors[game.homeTeamId].background} />
   );
-
+  const animationContainerRef = useRef<any>(null);
   const currentEventIndexRef = useRef(0);
 
   useEffect(() => {
@@ -53,10 +56,6 @@ const InstantReplayScreen: React.FC<InstantReplayScreenProps> = ({ gameEvents, g
     setCurrentAwayScore(0);
     setCurrentHomeScore(0);
   }, [gameEvents]);
-
-  const togglePause = () => {
-    setIsPaused((prevIsPaused) => !prevIsPaused);
-  };
 
   const resetGame = () => {
     const constructedGame = gameConstructor(gameEvents, game.gameStage);
@@ -70,9 +69,32 @@ const InstantReplayScreen: React.FC<InstantReplayScreenProps> = ({ gameEvents, g
     setFieldBackground(<HomeFieldBackground fill={teamColors[game.homeTeamId].background} />);
   };
 
+  const triggerTouchdownAnimation = (event: GameEvent): Promise<void> => {
+    return new Promise((resolve) => {
+      if (animationContainerRef.current) {
+        const isHomeTeam = event.team.id === game.homeTeamId;
+  
+        // Start the animation and use the `onComplete` callback to resolve the Promise
+        animationContainerRef.current.startAnimation({
+          backgroundColor: isHomeTeam ? teamColors[game.homeTeamId].background : teamColors[game.awayTeamId].background,
+          textColor: isHomeTeam ? teamColors[game.homeTeamId].text : teamColors[game.awayTeamId].text,
+          playerImg: event.player.image,
+          comment: event.comment,
+          logo: event.team.logo,
+          direction: isHomeTeam ? 'home' : 'away',
+        });
+  
+        // Use a GSAP delayed call or timeline event to resolve the Promise after the animation duration
+        gsap.delayedCall(3, resolve); // Assume the animation lasts for 3 seconds
+      } else {
+        resolve(); // Resolve immediately if the animation container is not available
+      }
+    });
+  };
+  
   useEffect(() => {
     let timer: NodeJS.Timeout | undefined;
-
+  
     if (!isPaused && loadedGame) {
       timer = setInterval(() => {
         const currentEventIndex = currentEventIndexRef.current;
@@ -80,64 +102,87 @@ const InstantReplayScreen: React.FC<InstantReplayScreenProps> = ({ gameEvents, g
           const event = loadedGame[currentEventIndex];
           setCurrentTime(event.minute);
           setCurrentEvent(event);
-
+  
           if (isGameEvent(event)) {
             setCurrentHomeScore(event.score.home);
             setCurrentAwayScore(event.score.away);
-
-            // Set field background dynamically based on the scoring team
+  
             if (event.team.id === game.homeTeamId) {
-              // Home team scored, use home field background
               setFieldBackground(<HomeFieldBackground fill={teamColors[game.awayTeamId].background} />);
             } else if (event.team.id === game.awayTeamId) {
-              // Away team scored, use away field background
               setFieldBackground(<AwayFieldBackground fill={teamColors[game.homeTeamId].background} />);
             }
-
-            // Pause for 3 seconds on a real event
+  
+            // Trigger the animation and pause the game
             setIsPaused(true);
-            setTimeout(() => setIsPaused(false), 3000);
+            triggerTouchdownAnimation(event);
+           
+  
+            // Resume the game after 3 seconds (animation duration)
+            setTimeout(() => {
+              setIsPaused(false);
+            }, 5000);
           }
-
+  
           currentEventIndexRef.current += 1;
         } else {
-          clearInterval(timer);
+          clearInterval(timer); 
         }
       }, 100);
-
+  
       return () => clearInterval(timer);
     }
-
+  
     return () => clearInterval(timer);
   }, [isPaused, loadedGame, game.homeTeamId, game.awayTeamId]);
+  
+  
+  
 
   const currentQuarterOrdinal = convertQuarterToOrdinal(currentEvent?.quarter || 'First');
 
   return (
-    <div className="relative h-screen bg-black">
-      {/* Dynamic Football Field with Team Colors */}
+    <div className="relative h-screen bg-black overflow-hidden" >
       {fieldBackground}
 
-      {/* ScoreBug Component */}
+      {/* Conditionally render AnimationContainer if currentEvent is a GameEvent */}
+      {currentEvent && isGameEvent(currentEvent) && (
+  <AnimationContainer
+    ref={animationContainerRef}
+    backgroundColor={currentEvent.team.id === game.homeTeamId 
+      ? teamColors[game.homeTeamId].background 
+      : teamColors[game.awayTeamId].background}
+    textColor={currentEvent.team.id === game.homeTeamId 
+      ? teamColors[game.homeTeamId].text 
+      : teamColors[game.awayTeamId].text}
+    playerImg={currentEvent.player.image}
+    comment={currentEvent.comment}
+    logo={currentEvent.team.logo}
+    direction={currentEvent.team.id === game.homeTeamId ? 'home' : 'away'}
+  />
+)}
+
       <ScoreBug
         homeTeam={{
           name: game.homeTeamName,
           logo: game.homeTeamLogo,
           score: currentHomeScore,
-          colors: teamColors[game.homeTeamId]
+          colors: teamColors[game.homeTeamId],
         }}
         awayTeam={{
           name: game.awayTeamName,
           logo: game.awayTeamLogo,
           score: currentAwayScore,
-          colors: teamColors[game.awayTeamId]
+          colors: teamColors[game.awayTeamId],
         }}
         currentTime={currentTime}
         currentQuarter={currentQuarterOrdinal}
-        onPauseToggle={togglePause}
+        onPauseToggle={() => setIsPaused((prev) => !prev)}
         onReset={resetGame}
         isPaused={isPaused}
       />
+      <TestButton onClick={() => setIsPaused((prev) => !prev)} />
+      <BackButton onClick={resetGame} />
     </div>
   );
 };
