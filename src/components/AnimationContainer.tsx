@@ -1,9 +1,18 @@
-// src/components/AnimationContainer.tsx
-import React, { useRef, forwardRef, useImperativeHandle } from 'react';
-import { gsap } from 'gsap';
-import { useGSAP } from '@gsap/react';
-import TDAnimation from './TDAnimation';
-import CommentBox from './CommentBox';
+import React, { useRef, useEffect, useState, forwardRef, useImperativeHandle } from "react";
+import HomeTDFrames from "./HomeTDFrames";
+import AwayTDFrames from "./AwayTDFrames";
+import HomeFGFrames from "./HomeFGFrames";
+import AwayFGFrames from "./AwayFGFrames";
+import HomeBallFrames from "./HomeBallFrames";
+import AwayBallFrames from "./AwayBallFrames";
+import CommentBox from "./CommentBox";
+
+import useHomeTDAnimation from "../hooks/useHomeTDAnimation";
+import useAwayTDAnimation from "../hooks/useAwayTDAnimation";
+import useHomeFGAnimation from "../hooks/useHomeFGAnimation";
+import useAwayFGAnimation from "../hooks/useAwayFGAnimation";
+import useKickBallPosition from "../hooks/useKickBallPosition";
+import { gsap } from "gsap";
 
 interface AnimationContainerProps {
   backgroundColor: string;
@@ -11,95 +20,138 @@ interface AnimationContainerProps {
   playerImg: string;
   comment: string;
   logo: string;
-  direction: 'home' | 'away';
+  direction: "home" | "away";
+  scoreType: "td" | "fg";
 }
 
 const AnimationContainer = forwardRef<any, AnimationContainerProps>(
-  ({ backgroundColor, textColor, playerImg, comment, logo, direction }, ref) => {
-    const commentRef = useRef<HTMLDivElement | null>(null);
-    const containerRef = useRef<HTMLDivElement | null>(null);
+  ({ backgroundColor, textColor, playerImg, comment, logo, direction, scoreType }, ref) => {
+    const containerRef = useRef<HTMLDivElement>(null);
+    const headRef = useRef<HTMLDivElement>(null);
 
-    // Expose the startAnimation method using useImperativeHandle
-    useImperativeHandle(ref, () => ({
-      startAnimation: () => {
-        if (containerRef.current) {
-          gsap.fromTo(
-            containerRef.current,
-            { x: direction === 'home' ? '-50vw' : '50vw', opacity: 1 },
-            {
-              x: direction === 'home' ? '50vw' : '-50vw',
-              duration: 3,
-              ease: 'power1.inOut',
-              onComplete: () => {
-                gsap.to(containerRef.current, { opacity: 0, duration: 1 });
-              },
-            }
+
+    const [shouldKickBall, setShouldKickBall] = useState(false);
+    const [showKicker, setShowKicker] = useState(true);
+
+    const isFG = scoreType === "fg";
+    const ballPos = useKickBallPosition(direction, isFG);
+
+    let animationFrames: React.ReactElement | null = null;
+    let ballFrames: React.ReactElement | null = null;
+
+    
+
+    useEffect(() => {
+      if (!isFG) return;
+      setShowKicker(true);
+      const timeoutDuration = direction === "away" ? 3200 : 3000;
+
+      const timeout = setTimeout(() => {
+        setShouldKickBall(true);
+      }, timeoutDuration);
+
+      return () => clearTimeout(timeout);
+    }, [isFG, direction]);
+
+    // 🏈 Apply the correct animation logic
+    if (scoreType === "td") {
+      if (direction === "home") {
+        useHomeTDAnimation(containerRef, true);
+        animationFrames = <HomeTDFrames />;
+      } else {
+        useAwayTDAnimation(containerRef, true);
+        animationFrames = <AwayTDFrames />;
+      }
+    } else if (scoreType === "fg") {
+      if (direction === "home") {
+        useHomeFGAnimation(containerRef, true);
+        if (showKicker) {
+          animationFrames = (
+            <HomeFGFrames onRemove={() => setShowKicker(false)} headRef={headRef} />
           );
         }
-      },
-    }));
+      } else {
+        useAwayFGAnimation(containerRef, true);
+        if (showKicker) {
+          animationFrames = (
+            <AwayFGFrames onRemove={() => setShowKicker(false)} headRef={headRef} />
+          );
+        }
+      }
 
-    // useGSAP for the CommentBox animation
-    useGSAP(
-      () => {
-        if (!commentRef.current) return;
-        const timeline = gsap.timeline();
-
-        // Step 1: Bounce in from the top
-        timeline.fromTo(
-          commentRef.current,
-          { y: -150, opacity: 0 },
-          {
-            y: 20,
-            opacity: 1,
-            duration: 1,
-            ease: 'bounce.out',
-            delay: 1,
-          }
-        );
-
-        // Step 2: Pause for 2 seconds
-        timeline.to(commentRef.current, { duration: 2 });
-
-        // Step 3: Fade out and move up off the screen
-        timeline.to(commentRef.current, {
-          y: -150,
-          opacity: 0,
-          duration: 1,
-          ease: 'power1.in',
-        });
-
-        return () => {
-          timeline.kill();
-        };
-      },
-      { scope: commentRef }
-    );
+      if (ballPos) {
+        ballFrames =
+          direction === "home" ? (
+            <HomeBallFrames
+              x={ballPos.x}
+              y={ballPos.y}
+              animate={shouldKickBall}
+              onRemove={() => {
+                setShouldKickBall(false);
+              }}
+            />
+          ) : (
+            <AwayBallFrames
+              x={ballPos.x}
+              y={ballPos.y}
+              animate={shouldKickBall}
+              onRemove={() => {
+                setShouldKickBall(false);
+              }}
+            />
+          );
+      }
+    }
 
     return (
-      <div className="absolute inset-0">
+      <div>
         <div
           ref={containerRef}
-          className="absolute inset-0 flex items-center justify-center translate-y-10"
+          style={{
+            position: "absolute",
+            top: "40%",
+            width: "400px",
+            height: "240px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            border: "2px solid white",
+          }}
         >
-          {/* Render the TDAnimation */}
-          <TDAnimation
-            textColor={textColor}
-            backgroundColor={backgroundColor}
-            playerImg={playerImg}
-            direction={direction}
-          />
+          {showKicker && (
+            <div
+              ref={headRef}
+              style={{
+                position: "absolute",
+                top: "10px",
+                left: "50%",
+                transform: "translateX(-50%)",
+                width: "80px",
+                height: "80px",
+                borderRadius: "50%",
+                overflow: "hidden",
+                backgroundColor: backgroundColor,
+              }}
+            >
+              <img
+                src={playerImg}
+                alt="Player Face"
+                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              />
+            </div>
+          )}
+
+          {animationFrames}
         </div>
-        <div ref={commentRef}>
-          {/* Render the CommentBox */}
-          <CommentBox
-            textColor={textColor}
-            backgroundColor={backgroundColor}
-            comment={comment}
-            logo={logo}
-            playerImg={playerImg}
-          />
-        </div>
+
+        <CommentBox
+          backgroundColor={backgroundColor}
+          textColor={textColor}
+          comment={comment}
+          logo={logo}
+          playerImg={playerImg}
+        />
+        {ballFrames}
       </div>
     );
   }

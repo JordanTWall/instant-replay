@@ -25,7 +25,7 @@ backend_api
 *.sw?
 .env
 
-backend_api
+
 example_objects
 reduxnotes.txt
 timer_test

@@ -139,3 +139,4 @@ export interface GameObject {
   export type MinuteEvents = (GameEvent | DummyEvent)[];
   export type Quarter = MinuteEvents[];
   export type LoadedGame = Quarter[];
+  export type ScoreType = "td" | "fg";

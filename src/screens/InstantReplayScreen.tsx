@@ -1,6 +1,6 @@
 // src/screens/InstantReplayScreen.tsx
 import React, { useState, useEffect, useRef } from 'react';
-import { GameObject, GameEvent, DummyEvent } from '../types/GamaData';
+import { GameObject, GameEvent, DummyEvent, ScoreType } from '../types/GamaData';
 import { gameConstructor } from '../services/gameConstructor';
 import { teamColors } from '../styles/teamColors';
 import ScoreBug from '../components/ScoreBug';
@@ -37,6 +37,8 @@ const convertQuarterToOrdinal = (quarter: string): string => {
   }
 };
 
+
+
 const InstantReplayScreen: React.FC<InstantReplayScreenProps> = ({ gameEvents, game }) => {
   const [isPaused, setIsPaused] = useState(true);
   const [currentEvent, setCurrentEvent] = useState<GameEvent | DummyEvent | null>(null);
@@ -44,11 +46,27 @@ const InstantReplayScreen: React.FC<InstantReplayScreenProps> = ({ gameEvents, g
   const [currentTime, setCurrentTime] = useState<string>('15:00');
   const [currentHomeScore, setCurrentHomeScore] = useState(game.homeTeamScore);
   const [currentAwayScore, setCurrentAwayScore] = useState(game.awayTeamScore);
+  const [scoreType, setScoreType] = useState<ScoreType>("td"); // ✅ Add scoreType state
   const [fieldBackground, setFieldBackground] = useState<JSX.Element>(
     <HomeFieldBackground fill={teamColors[game.homeTeamId].background} />
   );
   const animationContainerRef = useRef<any>(null);
   const currentEventIndexRef = useRef(0);
+
+  const resetGame = () => {
+    const constructedGame = gameConstructor(gameEvents, game.gameStage);
+    setLoadedGame(constructedGame);
+    setIsPaused(true);
+    setCurrentEvent(null);
+    currentEventIndexRef.current = 0;
+    setCurrentTime("15:00");
+    setCurrentAwayScore(0);
+    setCurrentHomeScore(0);
+    setFieldBackground(
+      <HomeFieldBackground fill={teamColors[game.homeTeamId].background} />
+    );
+  };
+  
 
   useEffect(() => {
     const constructedGame = gameConstructor(gameEvents, game.gameStage);
@@ -57,41 +75,6 @@ const InstantReplayScreen: React.FC<InstantReplayScreenProps> = ({ gameEvents, g
     setCurrentHomeScore(0);
   }, [gameEvents]);
 
-  const resetGame = () => {
-    const constructedGame = gameConstructor(gameEvents, game.gameStage);
-    setLoadedGame(constructedGame);
-    setIsPaused(true);
-    setCurrentEvent(null);
-    currentEventIndexRef.current = 0;
-    setCurrentTime('15:00');
-    setCurrentAwayScore(0);
-    setCurrentHomeScore(0);
-    setFieldBackground(<HomeFieldBackground fill={teamColors[game.homeTeamId].background} />);
-  };
-
-  const triggerTouchdownAnimation = (event: GameEvent): Promise<void> => {
-    return new Promise((resolve) => {
-      if (animationContainerRef.current) {
-        const isHomeTeam = event.team.id === game.homeTeamId;
-  
-        // Start the animation and use the `onComplete` callback to resolve the Promise
-        animationContainerRef.current.startAnimation({
-          backgroundColor: isHomeTeam ? teamColors[game.homeTeamId].background : teamColors[game.awayTeamId].background,
-          textColor: isHomeTeam ? teamColors[game.homeTeamId].text : teamColors[game.awayTeamId].text,
-          playerImg: event.player.image,
-          comment: event.comment,
-          logo: event.team.logo,
-          direction: isHomeTeam ? 'home' : 'away',
-        });
-  
-        // Use a GSAP delayed call or timeline event to resolve the Promise after the animation duration
-        gsap.delayedCall(3, resolve); // Assume the animation lasts for 3 seconds
-      } else {
-        resolve(); // Resolve immediately if the animation container is not available
-      }
-    });
-  };
-  
   useEffect(() => {
     let timer: NodeJS.Timeout | undefined;
   
@@ -107,18 +90,20 @@ const InstantReplayScreen: React.FC<InstantReplayScreenProps> = ({ gameEvents, g
             setCurrentHomeScore(event.score.home);
             setCurrentAwayScore(event.score.away);
   
+            // ✅ Set scoreType dynamically based on event type
+            const newScoreType = event.type === "FG" ? "fg" : "td"; 
+            setScoreType(newScoreType);
+  
+            console.log("Event Type:", event.type, "Setting ScoreType:", newScoreType); // Debugging log ✅
+  
+            // ✅ Dynamically change field background based on scoring team
             if (event.team.id === game.homeTeamId) {
-              setFieldBackground(<HomeFieldBackground fill={teamColors[game.awayTeamId].background} />);
-            } else if (event.team.id === game.awayTeamId) {
-              setFieldBackground(<AwayFieldBackground fill={teamColors[game.homeTeamId].background} />);
+              setFieldBackground(<HomeFieldBackground fill={teamColors[game.homeTeamId].background} />);
+            } else {
+              setFieldBackground(<AwayFieldBackground fill={teamColors[game.awayTeamId].background} />);
             }
   
-            // Trigger the animation and pause the game
             setIsPaused(true);
-            triggerTouchdownAnimation(event);
-           
-  
-            // Resume the game after 3 seconds (animation duration)
             setTimeout(() => {
               setIsPaused(false);
             }, 5000);
@@ -126,7 +111,7 @@ const InstantReplayScreen: React.FC<InstantReplayScreenProps> = ({ gameEvents, g
   
           currentEventIndexRef.current += 1;
         } else {
-          clearInterval(timer); 
+          clearInterval(timer);
         }
       }, 100);
   
@@ -139,28 +124,26 @@ const InstantReplayScreen: React.FC<InstantReplayScreenProps> = ({ gameEvents, g
   
   
 
-  const currentQuarterOrdinal = convertQuarterToOrdinal(currentEvent?.quarter || 'First');
-
   return (
-    <div className="relative h-screen bg-black overflow-hidden" >
+    <div className="relative h-screen bg-black overflow-hidden">
       {fieldBackground}
 
-      {/* Conditionally render AnimationContainer if currentEvent is a GameEvent */}
       {currentEvent && isGameEvent(currentEvent) && (
-  <AnimationContainer
-    ref={animationContainerRef}
-    backgroundColor={currentEvent.team.id === game.homeTeamId 
-      ? teamColors[game.homeTeamId].background 
-      : teamColors[game.awayTeamId].background}
-    textColor={currentEvent.team.id === game.homeTeamId 
-      ? teamColors[game.homeTeamId].text 
-      : teamColors[game.awayTeamId].text}
-    playerImg={currentEvent.player.image}
-    comment={currentEvent.comment}
-    logo={currentEvent.team.logo}
-    direction={currentEvent.team.id === game.homeTeamId ? 'home' : 'away'}
-  />
-)}
+        <AnimationContainer
+          ref={animationContainerRef}
+          backgroundColor={currentEvent.team.id === game.homeTeamId 
+            ? teamColors[game.homeTeamId].background 
+            : teamColors[game.awayTeamId].background}
+          textColor={currentEvent.team.id === game.homeTeamId 
+            ? teamColors[game.homeTeamId].text 
+            : teamColors[game.awayTeamId].text}
+          playerImg={currentEvent.player.image}
+          comment={currentEvent.comment}
+          logo={currentEvent.team.logo}
+          direction={currentEvent.team.id === game.homeTeamId ? "home" : "away"}
+          scoreType={scoreType} // ✅ Pass scoreType to AnimationContainer
+        />
+      )}
 
       <ScoreBug
         homeTeam={{
@@ -176,11 +159,12 @@ const InstantReplayScreen: React.FC<InstantReplayScreenProps> = ({ gameEvents, g
           colors: teamColors[game.awayTeamId],
         }}
         currentTime={currentTime}
-        currentQuarter={currentQuarterOrdinal}
+        currentQuarter={convertQuarterToOrdinal(currentEvent?.quarter || 'First')}
         onPauseToggle={() => setIsPaused((prev) => !prev)}
         onReset={resetGame}
         isPaused={isPaused}
       />
+
       <TestButton onClick={() => setIsPaused((prev) => !prev)} />
       <BackButton onClick={resetGame} />
     </div>
@@ -188,3 +172,5 @@ const InstantReplayScreen: React.FC<InstantReplayScreenProps> = ({ gameEvents, g
 };
 
 export default InstantReplayScreen;
+
+
