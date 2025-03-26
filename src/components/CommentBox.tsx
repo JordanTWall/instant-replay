@@ -42,7 +42,7 @@ const CommentBox: React.FC<CommentBoxProps> = ({
       );
 
       // Step 2: Pause for 2 seconds
-      timeline.to(commentRef.current, { duration: 2 });
+      timeline.to(commentRef.current, { duration: 2.5 });
 
       // Step 3: Fade out and move up off the screen
       timeline.to(commentRef.current, {
