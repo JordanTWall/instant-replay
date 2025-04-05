@@ -108,3 +108,4 @@ function generateDummySeconds(existingSeconds: string[]): string[] {
 
   return seconds;
 }
+ 

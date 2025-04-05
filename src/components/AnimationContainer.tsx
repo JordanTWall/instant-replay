@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState, forwardRef, useImperativeHandle } from "react";
+import React, { useRef, useEffect, useState, forwardRef} from "react";
 import HomeTDFrames from "./HomeTDFrames";
 import AwayTDFrames from "./AwayTDFrames";
 import HomeFGFrames from "./HomeFGFrames";
@@ -12,7 +12,6 @@ import useAwayTDAnimation from "../hooks/useAwayTDAnimation";
 import useHomeFGAnimation from "../hooks/useHomeFGAnimation";
 import useAwayFGAnimation from "../hooks/useAwayFGAnimation";
 import useKickBallPosition from "../hooks/useKickBallPosition";
-import { gsap } from "gsap";
 
 interface AnimationContainerProps {
   backgroundColor: string;
