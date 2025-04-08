@@ -1,4 +1,3 @@
-// src/screens/InstantReplayScreen.tsx
 import React, { useState, useEffect, useRef } from 'react';
 import { GameObject, GameEvent, DummyEvent, ScoreType } from '../types/GamaData';
 import { gameConstructor } from '../services/gameConstructor';
@@ -15,41 +14,34 @@ interface InstantReplayScreenProps {
   game: GameObject;
 }
 
-// Utility function to check if the event is a GameEvent
 function isGameEvent(event: GameEvent | DummyEvent): event is GameEvent {
   return 'comment' in event && 'team' in event && 'player' in event;
 }
 
 const convertQuarterToOrdinal = (quarter: string): string => {
   switch (quarter.toLowerCase()) {
-    case 'first':
-      return '1st';
-    case 'second':
-      return '2nd';
-    case 'third':
-      return '3rd';
-    case 'fourth':
-      return '4th';
-    case 'overtime':
-      return 'OT';
-    default:
-      return quarter;
+    case 'first': return '1st';
+    case 'second': return '2nd';
+    case 'third': return '3rd';
+    case 'fourth': return '4th';
+    case 'overtime': return 'OT';
+    default: return quarter;
   }
 };
 
-
-
 const InstantReplayScreen: React.FC<InstantReplayScreenProps> = ({ gameEvents, game }) => {
   const [isPaused, setIsPaused] = useState(true);
+  const [isCheering, setIsCheering] = useState(false);
   const [currentEvent, setCurrentEvent] = useState<GameEvent | DummyEvent | null>(null);
   const [loadedGame, setLoadedGame] = useState<(GameEvent | DummyEvent)[] | null>(null);
   const [currentTime, setCurrentTime] = useState<string>('15:00');
   const [currentHomeScore, setCurrentHomeScore] = useState(game.homeTeamScore);
   const [currentAwayScore, setCurrentAwayScore] = useState(game.awayTeamScore);
-  const [scoreType, setScoreType] = useState<ScoreType>("td"); // ✅ Add scoreType state
+  const [scoreType, setScoreType] = useState<ScoreType>("td");
   const [fieldBackground, setFieldBackground] = useState<JSX.Element>(
-    <HomeFieldBackground fill={teamColors[game.homeTeamId].background} />
+    <HomeFieldBackground isCheering={false} />
   );
+
   const animationContainerRef = useRef<any>(null);
   const currentEventIndexRef = useRef(0);
 
@@ -58,15 +50,15 @@ const InstantReplayScreen: React.FC<InstantReplayScreenProps> = ({ gameEvents, g
     setLoadedGame(constructedGame);
     setIsPaused(true);
     setCurrentEvent(null);
+    setIsCheering(false);
     currentEventIndexRef.current = 0;
     setCurrentTime("15:00");
     setCurrentAwayScore(0);
     setCurrentHomeScore(0);
     setFieldBackground(
-      <HomeFieldBackground fill={teamColors[game.homeTeamId].background} />
+      <HomeFieldBackground  isCheering={false} />
     );
   };
-  
 
   useEffect(() => {
     const constructedGame = gameConstructor(gameEvents, game.gameStage);
@@ -77,7 +69,7 @@ const InstantReplayScreen: React.FC<InstantReplayScreenProps> = ({ gameEvents, g
 
   useEffect(() => {
     let timer: NodeJS.Timeout | undefined;
-  
+
     if (!isPaused && loadedGame) {
       timer = setInterval(() => {
         const currentEventIndex = currentEventIndexRef.current;
@@ -85,44 +77,43 @@ const InstantReplayScreen: React.FC<InstantReplayScreenProps> = ({ gameEvents, g
           const event = loadedGame[currentEventIndex];
           setCurrentTime(event.minute);
           setCurrentEvent(event);
-  
+
           if (isGameEvent(event)) {
             setCurrentHomeScore(event.score.home);
             setCurrentAwayScore(event.score.away);
-  
-            // ✅ Set scoreType dynamically based on event type
-            const newScoreType = event.type === "FG" ? "fg" : "td"; 
+
+            const newScoreType = event.type === "FG" ? "fg" : "td";
             setScoreType(newScoreType);
-  
-            console.log("Event Type:", event.type, "Setting ScoreType:", newScoreType); // Debugging log ✅
-  
-            // ✅ Dynamically change field background based on scoring team
-            if (event.team.id === game.homeTeamId) {
-              setFieldBackground(<HomeFieldBackground fill={teamColors[game.homeTeamId].background} />);
-            } else {
-              setFieldBackground(<AwayFieldBackground fill={teamColors[game.awayTeamId].background} />);
-            }
-  
+
+            setIsCheering(true);
+
+            setFieldBackground(
+              event.team.id === game.homeTeamId
+                ? <HomeFieldBackground  isCheering={true} />
+                : <AwayFieldBackground  isCheering={true} />
+            );
+
+            setTimeout(() => {
+              setIsCheering(false);
+            }, 3000);
+
             setIsPaused(true);
             setTimeout(() => {
               setIsPaused(false);
             }, 5000);
           }
-  
+
           currentEventIndexRef.current += 1;
         } else {
           clearInterval(timer);
         }
       }, 100);
-  
+
       return () => clearInterval(timer);
     }
-  
+
     return () => clearInterval(timer);
   }, [isPaused, loadedGame, game.homeTeamId, game.awayTeamId]);
-  
-  
-  
 
   return (
     <div className="relative h-screen bg-black overflow-hidden">
@@ -131,17 +122,17 @@ const InstantReplayScreen: React.FC<InstantReplayScreenProps> = ({ gameEvents, g
       {currentEvent && isGameEvent(currentEvent) && (
         <AnimationContainer
           ref={animationContainerRef}
-          backgroundColor={currentEvent.team.id === game.homeTeamId 
-            ? teamColors[game.homeTeamId].background 
+          backgroundColor={currentEvent.team.id === game.homeTeamId
+            ? teamColors[game.homeTeamId].background
             : teamColors[game.awayTeamId].background}
-          textColor={currentEvent.team.id === game.homeTeamId 
-            ? teamColors[game.homeTeamId].text 
+          textColor={currentEvent.team.id === game.homeTeamId
+            ? teamColors[game.homeTeamId].text
             : teamColors[game.awayTeamId].text}
           playerImg={currentEvent.player.image}
           comment={currentEvent.comment}
           logo={currentEvent.team.logo}
           direction={currentEvent.team.id === game.homeTeamId ? "home" : "away"}
-          scoreType={scoreType} // ✅ Pass scoreType to AnimationContainer
+          scoreType={scoreType}
         />
       )}
 
@@ -172,5 +163,3 @@ const InstantReplayScreen: React.FC<InstantReplayScreenProps> = ({ gameEvents, g
 };
 
 export default InstantReplayScreen;
-
-
