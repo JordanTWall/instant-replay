@@ -7,7 +7,7 @@ import ScoreBug from '../components/ScoreBug';
 import HomeFieldBackground from '../components/HomeFieldBackground';
 import AwayFieldBackground from '../components/AwayFieldBackground';
 import AnimationContainer from '../components/AnimationContainer';
-import TestButton from '../components/TestButton';
+
 import BackButton from '../components/BackButton';
 import useGameController from '../hooks/useGameController';
 
@@ -135,7 +135,7 @@ const InstantReplayScreen: React.FC<InstantReplayScreenProps> = ({ gameEvents, g
         isUserPaused={isUserPaused}
       />
 
-      <TestButton onClick={handlePauseToggle} />
+     
       <BackButton onClick={resetGame} />
     </div>
   );

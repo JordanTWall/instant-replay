@@ -11,7 +11,7 @@ const BackButton: React.FC<BackButtonProps> = ({ onClick }) => {
       onClick={onClick}
       className="fixed bottom-4 left-4 bg-pink-600 text-white px-6 py-3 rounded-lg text-xl"
     >
-      Test
+      Back
     </button>
   );
 };
