@@ -1,12 +1,12 @@
 // src/components/HomeFieldBackground.tsx
 import React, { useEffect, useState } from "react";
 
-import Home1 from "../assets/svgs/HomeFieldSvgs/Homefieldcheer1.svg";
-import Home2 from "../assets/svgs/HomeFieldSvgs/Homefieldcheer2.svg";
-import Home3 from "../assets/svgs/HomeFieldSvgs/Homefieldcheer3.svg";
-import Home4 from "../assets/svgs/HomeFieldSvgs/Homefieldcheer4.svg";
-import Home5 from "../assets/svgs/HomeFieldSvgs/Homefieldcheer5.svg";
-import Home6 from "../assets/svgs/HomeFieldSvgs/Homefieldcheer6.svg";
+import Home1 from "../assets/svgs/homeFieldSvgs/homefieldcheer1.svg";
+import Home2 from "../assets/svgs/homeFieldSvgs/homefieldcheer2.svg";
+import Home3 from "../assets/svgs/homeFieldSvgs/homefieldcheer3.svg";
+import Home4 from "../assets/svgs/homeFieldSvgs/homefieldcheer4.svg";
+import Home5 from "../assets/svgs/homeFieldSvgs/homefieldcheer5.svg";
+import Home6 from "../assets/svgs/homeFieldSvgs/homefieldcheer6.svg";
 
 
 interface HomeFieldBackgroundProps {
@@ -27,7 +27,7 @@ const HomeFieldBackground: React.FC<HomeFieldBackgroundProps> = ({  isCheering }
     if (isCheering) {
       interval = setInterval(() => {
         setFrameIndex((prev) => (prev + 1) % frames.length);
-      }, 30);
+      }, 100);
     } else {
       setFrameIndex(0);
     }
@@ -37,7 +37,7 @@ const HomeFieldBackground: React.FC<HomeFieldBackgroundProps> = ({  isCheering }
     };
   }, [isCheering]);
 
-  return <img src={frames[frameIndex]} alt="Away Field Background" className="w-full h-full" />;
+  return <img src={frames[frameIndex]} alt="Away Field Background" className="w-full h-full object-cover fill-none" />;
 };
 
 export default HomeFieldBackground;

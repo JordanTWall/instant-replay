@@ -1,3 +1,4 @@
+// src/screens/InstantReplayScreen.tsx
 import React, { useState, useEffect, useRef } from 'react';
 import { GameObject, GameEvent, DummyEvent, ScoreType } from '../types/GamaData';
 import { gameConstructor } from '../services/gameConstructor';
@@ -30,7 +31,9 @@ const convertQuarterToOrdinal = (quarter: string): string => {
 };
 
 const InstantReplayScreen: React.FC<InstantReplayScreenProps> = ({ gameEvents, game }) => {
-  const [isPaused, setIsPaused] = useState(true);
+  const [isGamePaused, setIsGamePaused] = useState(false);
+  const [isUserPaused, setIsUserPaused] = useState(true);
+
   const [isCheering, setIsCheering] = useState(false);
   const [currentEvent, setCurrentEvent] = useState<GameEvent | DummyEvent | null>(null);
   const [loadedGame, setLoadedGame] = useState<(GameEvent | DummyEvent)[] | null>(null);
@@ -48,16 +51,15 @@ const InstantReplayScreen: React.FC<InstantReplayScreenProps> = ({ gameEvents, g
   const resetGame = () => {
     const constructedGame = gameConstructor(gameEvents, game.gameStage);
     setLoadedGame(constructedGame);
-    setIsPaused(true);
+    setIsGamePaused(false);
+    setIsUserPaused(true);
     setCurrentEvent(null);
     setIsCheering(false);
     currentEventIndexRef.current = 0;
     setCurrentTime("15:00");
     setCurrentAwayScore(0);
     setCurrentHomeScore(0);
-    setFieldBackground(
-      <HomeFieldBackground  isCheering={false} />
-    );
+    setFieldBackground(<HomeFieldBackground isCheering={false} />);
   };
 
   useEffect(() => {
@@ -70,37 +72,27 @@ const InstantReplayScreen: React.FC<InstantReplayScreenProps> = ({ gameEvents, g
   useEffect(() => {
     let timer: NodeJS.Timeout | undefined;
 
-    if (!isPaused && loadedGame) {
+    if (!isUserPaused && !isGamePaused && loadedGame) {
       timer = setInterval(() => {
-        const currentEventIndex = currentEventIndexRef.current;
-        if (currentEventIndex < loadedGame.length) {
-          const event = loadedGame[currentEventIndex];
+        const currentIndex = currentEventIndexRef.current;
+
+        if (currentIndex < loadedGame.length) {
+          const event = loadedGame[currentIndex];
           setCurrentTime(event.minute);
           setCurrentEvent(event);
 
           if (isGameEvent(event)) {
             setCurrentHomeScore(event.score.home);
             setCurrentAwayScore(event.score.away);
-
-            const newScoreType = event.type === "FG" ? "fg" : "td";
-            setScoreType(newScoreType);
-
-            setIsCheering(true);
-
-            setFieldBackground(
-              event.team.id === game.homeTeamId
-                ? <HomeFieldBackground  isCheering={true} />
-                : <AwayFieldBackground  isCheering={true} />
-            );
+            setScoreType(event.type === "FG" ? "fg" : "td");
 
             setTimeout(() => {
-              setIsCheering(false);
+              setIsCheering(true);
+              setTimeout(() => setIsCheering(false), 1200);
             }, 3000);
 
-            setIsPaused(true);
-            setTimeout(() => {
-              setIsPaused(false);
-            }, 5000);
+            setIsGamePaused(true);
+            setTimeout(() => setIsGamePaused(false), 5000);
           }
 
           currentEventIndexRef.current += 1;
@@ -108,12 +100,14 @@ const InstantReplayScreen: React.FC<InstantReplayScreenProps> = ({ gameEvents, g
           clearInterval(timer);
         }
       }, 100);
-
-      return () => clearInterval(timer);
     }
 
     return () => clearInterval(timer);
-  }, [isPaused, loadedGame, game.homeTeamId, game.awayTeamId]);
+  }, [isUserPaused, isGamePaused, loadedGame]);
+
+  const handlePauseToggle = () => {
+    setIsUserPaused(prev => !prev);
+  };
 
   return (
     <div className="relative h-screen bg-black overflow-hidden">
@@ -151,12 +145,12 @@ const InstantReplayScreen: React.FC<InstantReplayScreenProps> = ({ gameEvents, g
         }}
         currentTime={currentTime}
         currentQuarter={convertQuarterToOrdinal(currentEvent?.quarter || 'First')}
-        onPauseToggle={() => setIsPaused((prev) => !prev)}
+        onPauseToggle={handlePauseToggle}
         onReset={resetGame}
-        isPaused={isPaused}
+        isUserPaused={isUserPaused}
       />
 
-      <TestButton onClick={() => setIsPaused((prev) => !prev)} />
+      <TestButton onClick={handlePauseToggle} />
       <BackButton onClick={resetGame} />
     </div>
   );

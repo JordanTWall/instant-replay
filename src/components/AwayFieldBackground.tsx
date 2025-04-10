@@ -27,7 +27,7 @@ const AwayFieldBackground: React.FC<AwayFieldBackgroundProps> = ({  isCheering }
     if (isCheering) {
       interval = setInterval(() => {
         setFrameIndex((prev) => (prev + 1) % frames.length);
-      }, 30);
+      }, 100);
     } else {
       setFrameIndex(0);
     }
@@ -37,7 +37,7 @@ const AwayFieldBackground: React.FC<AwayFieldBackgroundProps> = ({  isCheering }
     };
   }, [isCheering]);
 
-  return <img src={frames[frameIndex]} alt="Home Field Background" className="w-full h-full" />;
+  return <img src={frames[frameIndex]} alt="Home Field Background" className="w-full h-full object-cover fill-none" />;
 };
 
 export default AwayFieldBackground;

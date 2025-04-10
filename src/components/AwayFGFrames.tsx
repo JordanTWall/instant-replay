@@ -90,6 +90,7 @@ const AwayFGFrames: React.FC<Props> = ({ onRemove, headRef }) => {
         }
       } else {
         const next = currentFrame + 1;
+        //set is cheering true
         if (next >= awayKickFrames.length) {
           clearInterval(interval);
         } else {
@@ -97,7 +98,7 @@ const AwayFGFrames: React.FC<Props> = ({ onRemove, headRef }) => {
         }
       }
     }, 30);
-
+// set is cheering false 
     return () => clearInterval(interval);
   }, [currentFrame, phase, loopCount]);
 
