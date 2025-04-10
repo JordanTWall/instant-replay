@@ -10,7 +10,7 @@ interface GameListScreenProps {
   games: any[]; 
 }
 
-const GameListScreen: React.FC<GameListScreenProps> = ({ onBackClick, selectedTeam, selectedSeason, onGameClick, games }) => {
+const GameListScreen: React.FC<GameListScreenProps> = ({ onBackClick, selectedTeam,  onGameClick, games }) => {
   const [showScores, setShowScores] = useState(false);
 
   const toggleScores = () => {

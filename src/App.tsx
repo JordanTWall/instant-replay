@@ -46,10 +46,10 @@ const App: React.FC = () => {
   };
 
   const handleGameClick = async (game: any) => {
-    setSelectedGame(game); // Set the selected game in the state
+    setSelectedGame(game); 
   };
   
-  // Use a useEffect to trigger fetchGameEvents when selectedGame changes
+  
   useEffect(() => {
     const fetchEvents = async () => {
       if (selectedGame) {
@@ -57,7 +57,7 @@ const App: React.FC = () => {
           const events = await fetchGameEvents(selectedGame.gameId);
           setGameEvents(events);
           console.log(events)
-          setCurrentScreen('instantReplay'); // Navigate to the InstantReplay screen
+          setCurrentScreen('instantReplay'); 
         } catch (err) {
           console.error('Failed to fetch game events:', err);
         }
@@ -111,8 +111,8 @@ const App: React.FC = () => {
           onBackClick={handleBackClick}
           selectedTeam={selectedTeam.name}
           selectedSeason={selectedSeason}
-          onGameClick={handleGameClick} // Pass the handler to GameListScreen
-          games={games} // Pass the games list
+          onGameClick={handleGameClick} 
+          games={games} 
         />
       )}
         {currentScreen === 'instantReplay' && selectedGame && gameEvents && (

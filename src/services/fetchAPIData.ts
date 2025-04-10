@@ -1,6 +1,6 @@
 // src/services/fetchAPIData.ts
 import axios from 'axios';
-import { GameObject, GameEvent, GameEventResponse } from '../types/GamaData'; // Import GameObject type
+import { GameObject, GameEvent, GameEventResponse } from '../types/GamaData';
 
 export const fetchGames = async (teamName: string, season: string): Promise<GameObject[]> => {
   try {
@@ -10,7 +10,7 @@ export const fetchGames = async (teamName: string, season: string): Promise<Game
         season: season,
       },
     });
-    return response.data as GameObject[]; // Ensure the response matches the GameObject type
+    return response.data as GameObject[]; 
   } catch (err) {
     console.error('Failed to fetch game data:', err);
     throw err;
@@ -23,7 +23,7 @@ export const fetchGameEvents = async (gameId: number): Promise<GameEvent[]> => {
       params: { gameId },
     });
     console.log(response.data.response)
-    return response.data.response;  // Extract and return the actual events array
+    return response.data.response; 
   } catch (err) {
     console.error('Failed to fetch game event data:', err);
     throw err;

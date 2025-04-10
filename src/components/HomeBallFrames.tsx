@@ -26,7 +26,7 @@ const HomeBallFrames: React.FC<Props> = ({ animate = false, x, y, onRemove }) =>
   const [currentFrame, setCurrentFrame] = useState(0);
   const ballRef = useRef<HTMLImageElement>(null);
 
-  // Animate frames
+ 
   useEffect(() => {
     if (!animate) return;
 
@@ -37,7 +37,6 @@ const HomeBallFrames: React.FC<Props> = ({ animate = false, x, y, onRemove }) =>
     return () => clearInterval(interval);
   }, [animate]);
 
-  // Animate arc + fade out + removal
   useEffect(() => {
     if (!animate || !ballRef.current) return;
   

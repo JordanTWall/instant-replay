@@ -24,7 +24,7 @@ interface AnimationContainerProps {
 }
 
 const AnimationContainer = forwardRef<any, AnimationContainerProps>(
-  ({ backgroundColor, textColor, playerImg, comment, logo, direction, scoreType }, ref) => {
+  ({ backgroundColor, textColor, playerImg, comment, logo, direction, scoreType }, ) => {
     const containerRef = useRef<HTMLDivElement>(null);
     const headRef = useRef<HTMLDivElement>(null);
 
@@ -52,7 +52,6 @@ const AnimationContainer = forwardRef<any, AnimationContainerProps>(
       return () => clearTimeout(timeout);
     }, [isFG, direction]);
 
-    // 🏈 Apply the correct animation logic
     if (scoreType === "td") {
       if (direction === "home") {
         useHomeTDAnimation(containerRef, true);

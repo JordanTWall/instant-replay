@@ -17,7 +17,7 @@ interface GameCardProps {
   };
   showScores: boolean;
   selectedTeam: string;
-  onClick: () => void; // Include this to handle clicks on the GameCard
+  onClick: () => void; 
 }
 
 const GameCard: React.FC<GameCardProps> = ({ game, showScores, selectedTeam, onClick }) => {
@@ -34,7 +34,7 @@ const GameCard: React.FC<GameCardProps> = ({ game, showScores, selectedTeam, onC
   return (
     <div 
       className="bg-white shadow-md rounded-lg p-4 mb-4 w-full max-w-3xl flex flex-col items-center text-center cursor-pointer hover:bg-gray-200 transition-colors"
-      onClick={onClick} // Use the onClick prop here
+      onClick={onClick} 
     >
       <div className="flex justify-between items-center mb-2 w-full ">
         <div className="w-1/5 flex justify-center">

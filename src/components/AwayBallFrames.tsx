@@ -27,7 +27,7 @@ const AwayBallFrames: React.FC<Props> = ({ animate = false, x, y, onRemove }) =>
   const [currentFrame, setCurrentFrame] = useState(0);
   const ballRef = useRef<HTMLImageElement>(null);
 
-  // Animate frames
+ 
   useEffect(() => {
     if (!animate) return;
 
@@ -38,7 +38,7 @@ const AwayBallFrames: React.FC<Props> = ({ animate = false, x, y, onRemove }) =>
     return () => clearInterval(interval);
   }, [animate]);
 
-  // Animate arc + fade out + removal
+ 
   useEffect(() => {
     if (!animate || !ballRef.current) return;
 
@@ -49,7 +49,7 @@ const AwayBallFrames: React.FC<Props> = ({ animate = false, x, y, onRemove }) =>
     });
 
     tl.to(ballRef.current, {
-      x: "-70vw", // Kicked towards the opposite direction for away
+      x: "-70vw", 
       y: "-45vw",
       duration: 0.8,
       ease: "power1.out",

@@ -20,24 +20,24 @@ const CommentBox: React.FC<CommentBoxProps> = ({
 }) => {
   const commentRef = useRef<HTMLDivElement | null>(null);
 
-  // Use the useGSAP hook to handle the animation
+
   useGSAP(
     () => {
       if (!commentRef.current) return;
 
-      // Animate the CommentBox
+    
       const timeline = gsap.timeline();
 
       // Step 1: Bounce in from the top
       timeline.fromTo(
         commentRef.current,
-        { y: -150, opacity: 1 }, // Start above the screen
+        { y: -150, opacity: 1 }, 
         {
-          y: 20, // Final position, similar to the ScoreBug's position but at the top
+          y: 20,
           opacity: 1,
-          duration: 1, // Animation duration
+          duration: 1, 
           ease: 'bounce.out',
-          delay: 1, // Starts after 1 second (when the player starts running)
+          delay: 1, 
         }
       );
 
@@ -48,18 +48,16 @@ const CommentBox: React.FC<CommentBoxProps> = ({
       timeline.to(commentRef.current, {
         y: -150,
         opacity: 0,
-        duration: 1, // Animation duration
+        duration: 1, 
         ease: 'power1.in',
       });
 
-      // Cleanup is handled by the useGSAP hook automatically
-
-      // Return the timeline so it can be properly managed by the context
+      
       return () => {
         timeline.kill();
       };
     },
-    [] // No dependencies needed for this animation
+    [] 
   );
 
   return (

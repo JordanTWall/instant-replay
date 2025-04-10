@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 
-// 🏃‍♂️ Home Run Frames
+
 import HomeRun1 from "../assets/svgs/homeFGSvgs/homeRun1.svg";
 import HomeRun2 from "../assets/svgs/homeFGSvgs/homeRun2.svg";
 import HomeRun3 from "../assets/svgs/homeFGSvgs/homeRun3.svg";
@@ -16,23 +16,20 @@ import HomeRun10 from "../assets/svgs/homeFGSvgs/homeRun10.svg";
 import HomeRun11 from "../assets/svgs/homeFGSvgs/homeRun11.svg";
 import HomeRun12 from "../assets/svgs/homeFGSvgs/homeRun12.svg";
 
-// 🦵 Home Kick Frames
-import HomeKick1 from "../assets/svgs/homeFGSvgs/homeKick1.svg";
+
+
 import HomeKick2 from "../assets/svgs/homeFGSvgs/homeKick2.svg";
 import HomeKick3 from "../assets/svgs/homeFGSvgs/homeKick3.svg";
 import HomeKick4 from "../assets/svgs/homeFGSvgs/homeKick4.svg";
 import HomeKick5 from "../assets/svgs/homeFGSvgs/homeKick5.svg";
-import HomeKick6 from "../assets/svgs/homeFGSvgs/homeKick6.svg";
 import HomeKick7 from "../assets/svgs/homeFGSvgs/homeKick7.svg";
 import HomeKick8 from "../assets/svgs/homeFGSvgs/homeKick8.svg";
-import HomeKick9 from "../assets/svgs/homeFGSvgs/homeKick9.svg";
-import HomeKick10 from "../assets/svgs/homeFGSvgs/homeKick10.svg";
 import HomeKick11 from "../assets/svgs/homeFGSvgs/homeKick11.svg";
 import HomeKick12 from "../assets/svgs/homeFGSvgs/homeKick12.svg";
 import HomeKick13 from "../assets/svgs/homeFGSvgs/homeKick13.svg";
 import HomeKick14 from "../assets/svgs/homeFGSvgs/homeKick14.svg";
 
-// ✅ Hardcoded home FG frames
+
 const homeRunFrames = [
   HomeRun1, HomeRun2, HomeRun3, HomeRun4, HomeRun5, HomeRun6,
   HomeRun7, HomeRun8, HomeRun9, HomeRun10, HomeRun11, HomeRun12,
