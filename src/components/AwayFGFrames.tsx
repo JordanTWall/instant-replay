@@ -39,8 +39,8 @@ const awayRunFrames = [
 ];
 
 const awayKickFrames = [
-  AwayKick1, AwayKick2, AwayKick3, AwayKick4, AwayKick5,
-  AwayKick6, AwayKick7, AwayKick8, AwayKick9, AwayKick10,
+  AwayKick2, AwayKick3, AwayKick4, AwayKick5,
+  AwayKick7, AwayKick8, 
   AwayKick11, AwayKick12, AwayKick13, AwayKick14,
 ];
 

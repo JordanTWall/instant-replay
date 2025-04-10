@@ -33,7 +33,6 @@ const convertQuarterToOrdinal = (quarter: string): string => {
 const InstantReplayScreen: React.FC<InstantReplayScreenProps> = ({ gameEvents, game }) => {
   const [isGamePaused, setIsGamePaused] = useState(false);
   const [isUserPaused, setIsUserPaused] = useState(true);
-
   const [isCheering, setIsCheering] = useState(false);
   const [currentEvent, setCurrentEvent] = useState<GameEvent | DummyEvent | null>(null);
   const [loadedGame, setLoadedGame] = useState<(GameEvent | DummyEvent)[] | null>(null);
@@ -41,9 +40,7 @@ const InstantReplayScreen: React.FC<InstantReplayScreenProps> = ({ gameEvents, g
   const [currentHomeScore, setCurrentHomeScore] = useState(game.homeTeamScore);
   const [currentAwayScore, setCurrentAwayScore] = useState(game.awayTeamScore);
   const [scoreType, setScoreType] = useState<ScoreType>("td");
-  const [fieldBackground, setFieldBackground] = useState<JSX.Element>(
-    <HomeFieldBackground isCheering={false} />
-  );
+  const [isHomeField, setIsHomeField] = useState(true); // ⬅️ new toggle flag
 
   const animationContainerRef = useRef<any>(null);
   const currentEventIndexRef = useRef(0);
@@ -59,7 +56,7 @@ const InstantReplayScreen: React.FC<InstantReplayScreenProps> = ({ gameEvents, g
     setCurrentTime("15:00");
     setCurrentAwayScore(0);
     setCurrentHomeScore(0);
-    setFieldBackground(<HomeFieldBackground isCheering={false} />);
+    setIsHomeField(true);
   };
 
   useEffect(() => {
@@ -85,15 +82,11 @@ const InstantReplayScreen: React.FC<InstantReplayScreenProps> = ({ gameEvents, g
             setCurrentHomeScore(event.score.home);
             setCurrentAwayScore(event.score.away);
             setScoreType(event.type === "FG" ? "fg" : "td");
-            
-            if (event.team.id === game.homeTeamId) {
-              setFieldBackground(<HomeFieldBackground isCheering = {false} />);
-            } else {
-              setFieldBackground(<AwayFieldBackground isCheering = {false} />);
-            }
+
+            setIsHomeField(event.team.id === game.homeTeamId); // ⬅️ just toggle here
 
             setTimeout(() => {
-              setIsCheering(true);
+              setIsCheering(false);
               setTimeout(() => setIsCheering(false), 1200);
             }, 3000);
 
@@ -116,8 +109,14 @@ const InstantReplayScreen: React.FC<InstantReplayScreenProps> = ({ gameEvents, g
   };
 
   return (
-    <div className="relative h-screen bg-black overflow-hidden">
-      {fieldBackground}
+    <div className="relative h-screen bg-black overflow-hidden m-0 p-0">
+      {/* 🔁 Always render both fields */}
+      <div className={`absolute inset-0 transition-opacity duration-500 ${isHomeField ? 'opacity-100' : 'opacity-0'}`}>
+        <HomeFieldBackground isCheering={isCheering} />
+      </div>
+      <div className={`absolute inset-0 transition-opacity duration-500 ${!isHomeField ? 'opacity-100' : 'opacity-0'}`}>
+        <AwayFieldBackground isCheering={isCheering} />
+      </div>
 
       {currentEvent && isGameEvent(currentEvent) && (
         <AnimationContainer
@@ -163,3 +162,4 @@ const InstantReplayScreen: React.FC<InstantReplayScreenProps> = ({ gameEvents, g
 };
 
 export default InstantReplayScreen;
+

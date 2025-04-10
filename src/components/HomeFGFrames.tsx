@@ -39,8 +39,8 @@ const homeRunFrames = [
 ];
 
 const homeKickFrames = [
-  HomeKick1, HomeKick2, HomeKick3, HomeKick4, HomeKick5,
-  HomeKick6, HomeKick7, HomeKick8, HomeKick9, HomeKick10,
+   HomeKick2, HomeKick3, HomeKick4, HomeKick5,
+   HomeKick7, HomeKick8, 
   HomeKick11, HomeKick12, HomeKick13, HomeKick14,
 ];
 
