@@ -85,6 +85,12 @@ const InstantReplayScreen: React.FC<InstantReplayScreenProps> = ({ gameEvents, g
             setCurrentHomeScore(event.score.home);
             setCurrentAwayScore(event.score.away);
             setScoreType(event.type === "FG" ? "fg" : "td");
+            
+            if (event.team.id === game.homeTeamId) {
+              setFieldBackground(<HomeFieldBackground isCheering = {false} />);
+            } else {
+              setFieldBackground(<AwayFieldBackground isCheering = {false} />);
+            }
 
             setTimeout(() => {
               setIsCheering(true);
