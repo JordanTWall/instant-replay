@@ -9,6 +9,7 @@ import AwayFieldBackground from '../components/AwayFieldBackground';
 import AnimationContainer from '../components/AnimationContainer';
 import TestButton from '../components/TestButton';
 import BackButton from '../components/BackButton';
+import useGameController from '../hooks/useGameController';
 
 interface InstantReplayScreenProps {
   gameEvents: GameEvent[];
@@ -66,43 +67,22 @@ const InstantReplayScreen: React.FC<InstantReplayScreenProps> = ({ gameEvents, g
     setCurrentHomeScore(0);
   }, [gameEvents]);
 
-  useEffect(() => {
-    let timer: NodeJS.Timeout | undefined;
-
-    if (!isUserPaused && !isGamePaused && loadedGame) {
-      timer = setInterval(() => {
-        const currentIndex = currentEventIndexRef.current;
-
-        if (currentIndex < loadedGame.length) {
-          const event = loadedGame[currentIndex];
-          setCurrentTime(event.minute);
-          setCurrentEvent(event);
-
-          if (isGameEvent(event)) {
-            setCurrentHomeScore(event.score.home);
-            setCurrentAwayScore(event.score.away);
-            setScoreType(event.type === "FG" ? "fg" : "td");
-
-            setIsHomeField(event.team.id === game.homeTeamId); // ⬅️ just toggle here
-
-            setTimeout(() => {
-              setIsCheering(false);
-              setTimeout(() => setIsCheering(false), 1200);
-            }, 3000);
-
-            setIsGamePaused(true);
-            setTimeout(() => setIsGamePaused(false), 5000);
-          }
-
-          currentEventIndexRef.current += 1;
-        } else {
-          clearInterval(timer);
-        }
-      }, 100);
-    }
-
-    return () => clearInterval(timer);
-  }, [isUserPaused, isGamePaused, loadedGame]);
+  useGameController({
+    isUserPaused,
+    isGamePaused,
+    loadedGame,
+    game,
+    currentEventIndexRef,
+    setCurrentTime,
+    setCurrentEvent,
+    setCurrentHomeScore,
+    setCurrentAwayScore,
+    setScoreType,
+    setIsHomeField,
+    setIsCheering,
+    setIsGamePaused,
+  });
+  
 
   const handlePauseToggle = () => {
     setIsUserPaused(prev => !prev);
