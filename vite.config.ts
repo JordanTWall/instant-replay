@@ -8,6 +8,7 @@ dotenv.config();
 
 export default defineConfig({
   plugins: [react(), svgr(),],
+  base: '/instant-replay/',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),

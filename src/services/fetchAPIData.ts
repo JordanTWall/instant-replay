@@ -4,7 +4,7 @@ import { GameObject, GameEvent, GameEventResponse } from '../types/GamaData';
 
 export const fetchGames = async (teamName: string, season: string): Promise<GameObject[]> => {
   try {
-    const response = await axios.get(`http://localhost:8080/instantreplay/api/games`, {
+    const response = await axios.get(`http://api.wallwebdevelopment.com/instantreplay/api/games`, {
       params: {
         teamName: teamName,
         season: season,
@@ -19,7 +19,7 @@ export const fetchGames = async (teamName: string, season: string): Promise<Game
 
 export const fetchGameEvents = async (gameId: number): Promise<GameEvent[]> => {
   try {
-    const response = await axios.get<GameEventResponse>(`http://localhost:8080/instantreplay/api/events`, {
+    const response = await axios.get<GameEventResponse>(`http://api.wallwebdevelopment.com/instantreplay/api/events`, {
       params: { gameId },
     });
     console.log(response.data.response)
