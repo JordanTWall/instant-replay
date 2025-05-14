@@ -113,7 +113,7 @@ const AnimationContainer = forwardRef<any, AnimationContainerProps>(
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            border: "2px solid white",
+           
           }}
         >
           {showKicker && (
